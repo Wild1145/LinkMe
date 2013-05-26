@@ -1,0 +1,49 @@
+name: LinkMe
+main: me.Kyle.linkme.Linkme
+version: 0.5.5
+description: >
+             Link Me
+commands:
+  site:
+    description: Site website
+  forum:
+    description: Forums
+  bforum:
+    description: Broadcast forums
+    permissions: linkme.broadcast.forum
+  bsite:
+    description: Broadcast site website
+    permissions: linkme.broadcast.site
+  mum:
+    description: Mumble Server address
+  linkme:
+    description: List all commands
+  lm:
+    description: List all commands
+  ts:
+    description: TS3 IP
+  vent:
+    description: vent IP
+  facebook:
+    description: Facebook Page
+  bfacebook:
+    description: Broadcast Facebook Page
+    permissions: linkme.broadcast.facebook
+  youtube:
+    description: Youtube Page
+  byoutube:
+    description: Broadcast Youtube Page
+    permissions: linkme.broadcast.youtube
+  twitter:
+    description: Twitter Url 
+  btwitter:
+    description: Broadcast Twitter Url
+    permissions: linkme.broadcast.twitter
+  donator:
+    description: Donation Page
+  bdonator:
+    description: Broadcast Donation Page
+    permissions: linkme.broadcast.donator
+  bvoice:
+    description: Broadcasts all voice servers
+    permissions: linkme.broadcast.voice

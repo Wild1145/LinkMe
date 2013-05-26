@@ -1,0 +1,66 @@
+#########################
+#####  LINK-ME V0.5.7  ####
+#########################
+
+
+announcer: [LinkMe]
+
+
+# Site text goes here this is what is displayed before the URL
+sitetext: Our Website is located at
+
+# Site url goes here
+site: http://www.website.com
+
+# Forum text goes here this is what is displayed before the URL
+forumtext: Come visit our forum at
+
+# Forum url goes here
+forum: http://www.forum.com
+
+# TS3 text goes here this is what is displayed before the TS3 server IP
+ts3desc: Come visit our Teamspeak3 server at
+
+# TS3 Server ip goes here
+ts3ip: ts.server.com
+
+# Mumble Server information goes here
+mumbledesc: Join our mumble server at
+
+# Mumble Server ip goes here
+mumbleip: mumble.server.com
+
+# Vent text goes here this is what is displayed before the TS3 server IP
+ventdesc: Come visit our Ventrillo server at
+
+# Vent Server ip goes here
+ventip: vent.server.com
+
+# Facebook text goes here this is what is displayed before the Facebook URL
+facebookdesc: Come visit our Facebook page at
+
+# Facebook Url goes here
+facebookurl: http://www.facebook.com
+
+# Youtube text goes here this is what is displayed before the TS3 server IP
+youtubedesc: Come visit our Youtube page at
+
+# Youtube Server Url goes here
+youtubeurl: http://youtube.com/usernamehere
+
+# Twitter text goes here this is what is displayed before the Twitter URL or @tag
+twitterdesc: Come visit our Twitter feed at
+
+# Twitter Server Url goes here
+twitterurl: http://twitter.com/usernamehere
+
+# Donation text goes here this is what is displayed before the Donation page URL
+donatordesc: Go have a look and check out our donation page at and remember every donation keeps the server running.
+
+# Donation URL HERE
+donatorurl: http://www.superior-networks.com
+
+# voice servers: What goes here will be broadcast at the begginig of the list
+voiceserverlist: This is a list of our Voice Servers
+
+# END OF CONFIG
