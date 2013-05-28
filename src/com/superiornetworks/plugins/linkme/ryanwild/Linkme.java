@@ -1,4 +1,4 @@
-package me.Kyle.linkme;
+package com.superiornetworks.plugins.linkme.ryanwild;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
