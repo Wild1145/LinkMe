@@ -1,4 +1,4 @@
-package com.superiornetworks.plugins.linkme.ryanwild;
+package com.superiornetworks.plugins.linkme;
 
 import java.util.logging.Logger;
 import org.bukkit.Bukkit;
