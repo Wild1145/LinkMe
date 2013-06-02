@@ -11,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Linkme extends JavaPlugin {
 
-    public final Logger logger = Logger.getLogger("Minecraft-Server");
+    public static final Logger logger = Logger.getLogger("Minecraft-Server");
     public static Linkme plugin;
 
     @Override
