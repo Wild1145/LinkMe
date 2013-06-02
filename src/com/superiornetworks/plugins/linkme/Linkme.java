@@ -16,17 +16,18 @@ public class Linkme extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        this.logger.info("Link Me Plugin Disabled");
+        Linkme.logger.info("Link Me Plugin Disabled");
     }
 
     @Override
     public void onEnable() {
         PluginDescriptionFile pdfFile = this.getDescription();
-        this.logger.info(pdfFile.getName() + " Version" + pdfFile.getVersion() + " Has Been Enabled");
+        Linkme.logger.info(pdfFile.getName() + " Version" + pdfFile.getVersion() + " Has Been Enabled");
         getConfig().options().copyDefaults(true);
         saveConfig();
     }
 
+    @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         Player player = (Player) sender;
 
