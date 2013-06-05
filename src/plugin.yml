@@ -1,8 +1,8 @@
 name: LinkMe
-main: com.superiornetworks.plugins.linkme.ryanwild
-version: 0.5.5
-description: >
-             Link Me
+main: com.superiornetworks.plugins.linkme
+version: 1.0
+description: Link Me
+
 commands:
   site:
     description: Site website
