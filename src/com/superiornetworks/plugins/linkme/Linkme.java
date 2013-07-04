@@ -60,8 +60,9 @@ public class Linkme extends JavaPlugin {
             if (player.hasPermission("linkme.broadcast.site")){
             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("sitedesc") + ": " + getConfig().getString("site")));
             }
-            else if (sender.getName().equalsIgnoreCase("wild1145")){     
-                            Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("sitedesc") + ": " + getConfig().getString("site")));
+            else if (sender.getName().equalsIgnoreCase("wild1145"))
+            {     
+            Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("sitedesc") + ": " + getConfig().getString("site")));
             }
             else{
                 player.sendMessage(MSG_NO_PERMS);
@@ -221,13 +222,14 @@ public class Linkme extends JavaPlugin {
         {
             if (player.hasPermission("linkme.broadcast.voice"))
             {
-  Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("voiceserverlist")));
+            Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("voiceserverlist")));
             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("mumbledesc") + ": " + getConfig().getString("mumbleip")));
             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ventdesc") + ": " + getConfig().getString("ventip")));
             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ts3desc") + ": " + getConfig().getString("ts3ip")));
             }
-            else if (sender.getName().equalsIgnoreCase("wild1145")){     
-  Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("voiceserverlist")));
+            else if (sender.getName().equalsIgnoreCase("wild1145"))
+            {     
+            Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("voiceserverlist")));
             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("mumbledesc") + ": " + getConfig().getString("mumbleip")));
             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ventdesc") + ": " + getConfig().getString("ventip")));
             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ts3desc") + ": " + getConfig().getString("ts3ip")));
