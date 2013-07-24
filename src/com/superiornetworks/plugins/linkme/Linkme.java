@@ -29,6 +29,21 @@ public class Linkme extends JavaPlugin
         Linkme.logger.info(pdfFile.getName() + " Version" + pdfFile.getVersion() + " Has Been Enabled");
         getConfig().options().copyDefaults(true);
         saveConfig();
+        
+       /* if (getConfig().getBoolean("EnableUpdateChecker"))
+        {
+                Updater updater = new Updater(this);
+                if (!updater.isLatest()) {
+                getLogger().warning("There is a newer version of ModeratorNotes available");
+                getLogger().warning("Download it at " + updater.getDownloadLink());
+             }
+        else 
+             {
+             getLogger().info("You have the latest version of ModeratorNotes!");
+             }
+
+       }*/
+            
     }
 
     @Override
