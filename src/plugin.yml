@@ -1,5 +1,5 @@
 name: LinkMe
-main: com.superiornetworks.plugins.linkme.Linkme
+main: me.RyanWild.LinkMe.Linkme
 version: 1.0
 description: Link Me
 
