@@ -33,12 +33,16 @@ public class Linkme extends JavaPlugin
         Linkme.logger.log(Level.INFO, "{0} Version{1} Has Been Enabled", new Object[]{pdfFile.getName(), pdfFile.getVersion()});
         getConfig().options().copyDefaults(true);
         saveConfig();
-        try {
-    Metrics metrics = new Metrics(this);
-    metrics.start();
-} catch (IOException e) {
-    // Failed to submit the stats :-(
-}
+        try
+            {
+                Metrics metrics = new Metrics(this);
+                metrics.start();
+            } 
+        catch (IOException e)
+            {
+                  // Failed to submit the stats :-(
+            }
+        
         
        /* if (getConfig().getBoolean("EnableUpdateChecker"))
         {
