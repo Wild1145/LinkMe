@@ -35,12 +35,12 @@ public class Linkme extends JavaPlugin
         {
                 Updater updater = new Updater(this);
                 if (!updater.isLatest()) {
-                getLogger().warning("There is a newer version of ModeratorNotes available");
+                getLogger().warning("There is a newer version of LinkMe available");
                 getLogger().warning("Download it at " + updater.getDownloadLink());
              }
         else 
              {
-             getLogger().info("You have the latest version of ModeratorNotes!");
+             getLogger().info("You have the latest version of LinkMe!");
              }
 
        }*/
