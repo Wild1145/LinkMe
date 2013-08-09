@@ -46,7 +46,7 @@ public class Linkme extends JavaPlugin
         
         Update update = new Update(this);
       if (!update.isLatest()) {
-        getLogger().log(Level.WARNING, "There is a newer version of LinkMe available");
+        getLogger().log(Level.WARNING, "There is a newer version of LinkMe available to download.");
         getLogger().log(Level.INFO, "Download it at {0}", update.getDownloadLink());
       }
       else {
