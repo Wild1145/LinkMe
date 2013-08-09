@@ -44,19 +44,14 @@ public class Linkme extends JavaPlugin
             }
         
         
-       /* if (getConfig().getBoolean("EnableUpdateChecker"))
-        {
-                Updater updater = new Updater(this);
-                if (!updater.isLatest()) {
-                getLogger().warning("There is a newer version of LinkMe available");
-                getLogger().warning("Download it at " + updater.getDownloadLink());
-             }
-        else 
-             {
-             getLogger().info("You have the latest version of LinkMe!");
-             }
-
-       }*/
+        Update update = new Update(this);
+      if (!update.isLatest()) {
+        getLogger().log(Level.WARNING, "There is a newer version of LinkMe available");
+        getLogger().log(Level.INFO, "Download it at {0}", update.getDownloadLink());
+      }
+      else {
+        getLogger().info("You have the latest version of LinkMe!");
+      }
             
     }
 
