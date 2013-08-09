@@ -1,5 +1,7 @@
 package me.RyanWild.LinkMe;
 
+import java.io.IOException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -8,6 +10,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.entity.Player;
+import org.mcstats.Metrics;
 
 public class Linkme extends JavaPlugin
 
@@ -27,9 +30,15 @@ public class Linkme extends JavaPlugin
     public void onEnable()
     {
         PluginDescriptionFile pdfFile = this.getDescription();
-        Linkme.logger.info(pdfFile.getName() + " Version" + pdfFile.getVersion() + " Has Been Enabled");
+        Linkme.logger.log(Level.INFO, "{0} Version{1} Has Been Enabled", new Object[]{pdfFile.getName(), pdfFile.getVersion()});
         getConfig().options().copyDefaults(true);
         saveConfig();
+        try {
+    Metrics metrics = new Metrics(this);
+    metrics.start();
+} catch (IOException e) {
+    // Failed to submit the stats :-(
+}
         
        /* if (getConfig().getBoolean("EnableUpdateChecker"))
         {
