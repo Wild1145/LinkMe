@@ -3,7 +3,11 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+<<<<<<< HEAD
             <name>LinkMe</name>
+=======
+            <name>CommandViewer</name>
+>>>>>>> branch 'master' of https://github.com/Wild1145/CommandViewer.git
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>
