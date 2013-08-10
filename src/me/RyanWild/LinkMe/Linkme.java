@@ -220,7 +220,7 @@ public class Linkme extends JavaPlugin
         {
             if (player.hasPermission("linkme.broadcast.forum"))
             {
-            Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("forumdesc") + ": " + getConfig().getString("forum")));
+            Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("forumtext") + ": " + getConfig().getString("forum")));
             }
        /*     else if (sender.getName().equalsIgnoreCase("wild1145"))
             {     
