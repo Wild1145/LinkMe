@@ -48,6 +48,7 @@ public class Linkme extends JavaPlugin
       if (!update.isLatest()) {
         getLogger().log(Level.WARNING, "There is a newer version of LinkMe available");
         getLogger().log(Level.INFO, "Download it at {0}", update.getDownloadLink());
+        Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 has been Enabled! "); 
       }
       else {
         getLogger().info("You have the latest version of LinkMe!");
