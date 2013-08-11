@@ -38,6 +38,7 @@ public class Linkme extends JavaPlugin
         });
         getConfig().options().copyDefaults(true);
         saveConfig();
+        
         try
         {
             Metrics metrics = new Metrics(this);
@@ -45,7 +46,7 @@ public class Linkme extends JavaPlugin
         }
         catch (IOException e)
         {
-            // Failed to submit the stats :-(
+            System.out.println("[" + getDescription().getName() + "] Error Submitting stats!");
         }
 
 
