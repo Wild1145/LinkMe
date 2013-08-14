@@ -50,7 +50,7 @@ public class Linkme extends JavaPlugin
         }
 
 
-        Update update = new Update(this);
+       /* Update update = new Update(this);
         if (!update.isLatest())
         {
             getLogger().log(Level.WARNING, "There is a newer version of LinkMe available");
@@ -60,7 +60,7 @@ public class Linkme extends JavaPlugin
         else
         {
             getLogger().info("You have the latest version of LinkMe!");
-        }
+        }*/
         Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 has been Enabled! ");
     }
 
