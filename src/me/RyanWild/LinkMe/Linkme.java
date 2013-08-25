@@ -24,7 +24,7 @@ public class Linkme extends JavaPlugin
     @Override
     public void onDisable()
     {
-        Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 has been Disabled! ");
+        Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 & Kyle1986 has been Disabled! ");
         Linkme.logger.info("Link Me Plugin Disabled");
     }
 
@@ -61,7 +61,7 @@ public class Linkme extends JavaPlugin
         {
             getLogger().info("You have the latest version of LinkMe!");
         }*/
-        Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 has been Enabled! ");
+        Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 & Kyle1986 has been Enabled! ");
     }
 
     @Override
