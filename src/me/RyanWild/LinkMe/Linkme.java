@@ -25,7 +25,7 @@ public class Linkme extends JavaPlugin
     public void onDisable()
     {
         Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 & Kyle1986 has been Disabled! ");
-        Linkme.logger.info("Link Me Plugin Disabled");
+        Linkme.logger.info("LinkMe Plugin Disabled");
     }
 
     @Override
