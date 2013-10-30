@@ -207,6 +207,15 @@ public class Linkme extends JavaPlugin
                 return true;
             }
         }
+        else if (commandLabel.equalsIgnoreCase("voice"))
+        {
+
+            player.sendMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("voiceserverlist")));
+            player.sendMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("mumbledesc") + ": " + getConfig().getString("mumbleip")));
+            player.sendMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ventdesc") + ": " + getConfig().getString("ventip")));
+            player.sendMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ts3desc") + ": " + getConfig().getString("ts3ip")));
+
+        }
         return false;
     }
 
