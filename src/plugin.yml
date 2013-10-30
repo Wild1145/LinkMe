@@ -1,7 +1,7 @@
 
 name: LinkMe
 main: me.RyanWild.LinkMe.Linkme
-version: 1.0
+version: 1.0.1
 description: Link Me
 
 commands:

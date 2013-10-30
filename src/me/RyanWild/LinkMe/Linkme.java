@@ -38,7 +38,7 @@ public class Linkme extends JavaPlugin
         });
         getConfig().options().copyDefaults(true);
         saveConfig();
-        
+
         try
         {
             Metrics metrics = new Metrics(this);
@@ -50,17 +50,17 @@ public class Linkme extends JavaPlugin
         }
 
 
-       /* Update update = new Update(this);
-        if (!update.isLatest())
-        {
-            getLogger().log(Level.WARNING, "There is a newer version of LinkMe available");
-            getLogger().log(Level.INFO, "Download it at {0}", update.getDownloadLink());
+        /* Update update = new Update(this);
+         if (!update.isLatest())
+         {
+         getLogger().log(Level.WARNING, "There is a newer version of LinkMe available");
+         getLogger().log(Level.INFO, "Download it at {0}", update.getDownloadLink());
 
-        }
-        else
-        {
-            getLogger().info("You have the latest version of LinkMe!");
-        }*/
+         }
+         else
+         {
+         getLogger().info("You have the latest version of LinkMe!");
+         }*/
         Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 & Kyle1986 has been Enabled! ");
     }
 
@@ -75,30 +75,12 @@ public class Linkme extends JavaPlugin
             player.sendMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("sitetext") + ": " + getConfig().getString("site")));
 
         }
-        /*
-         else if (commandLabel.equalsIgnoreCase("linkme"))
-         {
-         player.sendMessage(ChatColor.GOLD + "[" + ChatColor.DARK_BLUE + "LINKME" + ChatColor.GOLD + "]\n" + "/site - Shows the site url\n" + "/bsite - Broadcasts the site url\n" + "/bvoice - Broadcasts voice servers\n" + "/mum - Shows Mumble Server Details\n" + "/ts - Shows the TS3 IP\n" + "/vent - Shows the Ventrillo IP\n" + "/facebook - Shows the Facebook Page\n" + "/bfacebook - Broadcasts the Facebook Page\n" + "/youtube - Show the Youtube Page\n" + "/byoutube - Broadcasts the Youtube Page\n" + "/twitter - SHows the Twitter Page\n" + "/btwitter - Broadcasts the Twitter Page\n" + "/donator - Shows the Donator Page\n" + "/bdonator - Broadcasts the Donator Page\n");
-
-         } 
-        
-        
-         else if (commandLabel.equalsIgnoreCase("lm"))
-         {
-         player.sendMessage(ChatColor.GOLD + "[" + ChatColor.DARK_BLUE + "LINKME" + ChatColor.GOLD + "]\n" + "/site - Shows the site url\n" + "/bsite - Broadcasts the site url\n" + "/bvoice - Broadcasts voice servers\n" + "/mum - Shows Mumble Server Details\n" + "/ts - Shows the TS3 IP\n" + "/vent - Shows the Ventrillo IP\n" + "/facebook - Shows the Facebook Page\n" + "/bfacebook - Broadcasts the Facebook Page\n" + "/youtube - Show the Youtube Page\n" + "/byoutube - Broadcasts the Youtube Page\n" + "/twitter - SHows the Twitter Page\n" + "/btwitter - Broadcasts the Twitter Page\n" + "/donator - Shows the Donator Page\n" + "/bdonator - Broadcasts the Donator Page\n");
-
-         }
-         */
         else if (commandLabel.equalsIgnoreCase("bsite"))
         {
             if (player.hasPermission("linkme.broadcast.site"))
             {
                 Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("sitedesc") + ": " + getConfig().getString("site")));
             }
-            /* else if (sender.getName().equalsIgnoreCase("wild1145"))
-             {     
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("sitedesc") + ": " + getConfig().getString("site")));
-             }*/
             else
             {
                 player.sendMessage(MSG_NO_PERMS);
@@ -126,9 +108,6 @@ public class Linkme extends JavaPlugin
             {
                 Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("facebookdesc") + ": " + getConfig().getString("facebookurl")));
             }
-            /* else if (sender.getName().equalsIgnoreCase("wild1145")){     
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("facebookdesc") + ": " + getConfig().getString("facebookurl")));
-             }*/
             else
             {
                 player.sendMessage(MSG_NO_PERMS);
@@ -151,10 +130,6 @@ public class Linkme extends JavaPlugin
             {
                 Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("facebookdesc") + ": " + getConfig().getString("facebookurl")));
             }
-            /* else if (sender.getName().equalsIgnoreCase("wild1145"))
-             {     
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("facebookdesc") + ": " + getConfig().getString("facebookurl")));
-             }*/
             else
             {
                 player.sendMessage(MSG_NO_PERMS);
@@ -172,10 +147,6 @@ public class Linkme extends JavaPlugin
             {
                 Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("twitterdesc") + ": " + getConfig().getString("twitterurl or @tag here")));
             }
-            /*   else if (sender.getName().equalsIgnoreCase("wild1145"))
-             {     
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("twitterdesc") + ": " + getConfig().getString("twitterurl or @tag here")));
-             }*/
             else
             {
                 player.sendMessage(MSG_NO_PERMS);
@@ -193,10 +164,6 @@ public class Linkme extends JavaPlugin
             {
                 Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("donatordesc") + ": " + getConfig().getString("donatorurl")));
             }
-            /*   else if (sender.getName().equalsIgnoreCase("wild1145"))
-             {     
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("donatordesc") + ": " + getConfig().getString("donatorurl")));
-             }*/
             else
             {
                 player.sendMessage(MSG_NO_PERMS);
@@ -214,10 +181,6 @@ public class Linkme extends JavaPlugin
             {
                 Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("forumtext") + ": " + getConfig().getString("forum")));
             }
-            /*     else if (sender.getName().equalsIgnoreCase("wild1145"))
-             {     
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("forumdesc") + ": " + getConfig().getString("forum")));
-             }*/
             else
             {
                 player.sendMessage(MSG_NO_PERMS);
@@ -238,13 +201,6 @@ public class Linkme extends JavaPlugin
                 Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ventdesc") + ": " + getConfig().getString("ventip")));
                 Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ts3desc") + ": " + getConfig().getString("ts3ip")));
             }
-            /* else if (sender.getName().equalsIgnoreCase("wild1145"))
-             {     
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("voiceserverlist")));
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("mumbledesc") + ": " + getConfig().getString("mumbleip")));
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ventdesc") + ": " + getConfig().getString("ventip")));
-             Bukkit.broadcastMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ts3desc") + ": " + getConfig().getString("ts3ip")));
-             }*/
             else
             {
                 player.sendMessage(MSG_NO_PERMS);
