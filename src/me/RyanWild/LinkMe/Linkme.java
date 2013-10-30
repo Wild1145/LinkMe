@@ -48,19 +48,7 @@ public class Linkme extends JavaPlugin
         {
             System.out.println("[" + getDescription().getName() + "] Error Submitting stats!");
         }
-
-
-        /* Update update = new Update(this);
-         if (!update.isLatest())
-         {
-         getLogger().log(Level.WARNING, "There is a newer version of LinkMe available");
-         getLogger().log(Level.INFO, "Download it at {0}", update.getDownloadLink());
-
-         }
-         else
-         {
-         getLogger().info("You have the latest version of LinkMe!");
-         }*/
+        
         Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 & Kyle1986 has been Enabled! ");
     }
 
