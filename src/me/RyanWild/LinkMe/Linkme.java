@@ -204,7 +204,14 @@ public class Linkme extends JavaPlugin
             player.sendMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("ts3desc") + ": " + getConfig().getString("ts3ip")));
 
         }
+        else if (commandLabel.equalsIgnoreCase("lmreload"))
+        {
+            if (player.hasPermission("linkme.reload"))
+            {
+            this.reloadConfig();
+            player.sendMessage("Link Me config has been reloaded!");
+        }  
+        }
         return false;
     }
-
 }

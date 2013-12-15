@@ -48,3 +48,6 @@ commands:
   bvoice:
     description: Broadcasts all voice servers
     permissions: linkme.broadcast.voice
+  lmreload:
+    description: Reloads LinkMe
+    permissions: linkme.reload
