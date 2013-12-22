@@ -19,7 +19,7 @@ public class Command_bsite extends BukkitCommand
 
         Player player = (Player) commandSender;
 
-        Bukkit.broadcastMessage(Linkme.config.getString("announcer") + ": " + (Linkme.config.getString("sitedesc") + ": " + Linkme.config.getString("site")));
+        Bukkit.broadcastMessage(Linkme.config.getString("announcer") + ": " + (Linkme.config.getString("sitetext") + ": " + Linkme.config.getString("site")));
 
         return false;
     }
