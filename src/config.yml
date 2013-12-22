@@ -63,4 +63,10 @@ donatorurl: http://www.superior-networks.com
 # voice servers: What goes here will be broadcast at the begginig of the list
 voiceserverlist: This is a list of our Voice Servers
 
+# Vote text goes here this is what is displayed before the URL
+votetext: Our Website is located at
+
+# Vote url goes here
+vote: http://www.website.com
+
 # END OF CONFIG
