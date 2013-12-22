@@ -3,6 +3,7 @@ package me.RyanWild.LinkMe;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import me.RyanWild.LinkMe.Commands.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -57,13 +58,9 @@ public class Linkme extends JavaPlugin
     {
         Player player = (Player) sender;
 
-        if (commandLabel.equalsIgnoreCase("site"))
-        {
-
-            player.sendMessage(getConfig().getString("announcer") + ": " + (getConfig().getString("sitetext") + ": " + getConfig().getString("site")));
-
-        }
-        else if (commandLabel.equalsIgnoreCase("bsite"))
+        plugin.getCommand("site").setExecutor(new Command_site(plugin));
+        
+        if (commandLabel.equalsIgnoreCase("bsite"))
         {
             if (player.hasPermission("linkme.broadcast.site"))
             {
