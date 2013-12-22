@@ -1,7 +1,7 @@
 name: LinkMe
 main: me.RyanWild.LinkMe.Linkme
 dev-url: http://dev.bukkit.org/bukkit-plugins/linkme/
-version: 2.0
+version: 2.1
 description: Link Me
 
 commands:
@@ -43,3 +43,7 @@ commands:
     description: Broadcasts all voice servers
   lmreload:
     description: Reloads LinkMe
+  vote:
+    description: Displays Voting information and URL
+  bvote:
+    description: Broadcasts the Vote information
