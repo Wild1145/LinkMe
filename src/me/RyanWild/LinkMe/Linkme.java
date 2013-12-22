@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import me.RyanWild.LinkMe.Commands.*;
+import net.pravian.bukkitlib.command.BukkitCommandHandler;
+import net.pravian.bukkitlib.config.YamlConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -16,7 +18,11 @@ import org.mcstats.Metrics;
 public class Linkme extends JavaPlugin
 {
 
-    public static final Logger logger = Logger.getLogger("Minecraft-Server");
+    public static final Logger logger = Bukkit.getLogger();
+    
+    public static BukkitCommandHandler handler;
+    
+    public static YamlConfig config;
 
     public static Linkme plugin;
 
@@ -32,6 +38,15 @@ public class Linkme extends JavaPlugin
     @Override
     public void onEnable()
     {
+        plugin = this;
+        
+        handler = new BukkitCommandHandler(plugin);
+        handler.setCommandLocation(Command_site.class.getPackage());
+        handler.setPermissionMessage(MSG_NO_PERMS);
+        
+        config = new YamlConfig(plugin,"config.yml",true);
+        config.load();
+        
         PluginDescriptionFile pdfFile = this.getDescription();
         Linkme.logger.log(Level.INFO, "{0} Version{1} Has Been Enabled", new Object[]
         {
@@ -56,7 +71,11 @@ public class Linkme extends JavaPlugin
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
     {
-        Player player = (Player) sender;
+        
+        return handler.handleCommand(sender, cmd, commandLabel, args);
+        
+        
+        /*Player player = (Player) sender;
 
         plugin.getCommand("site").setExecutor(new Command_site(plugin));
         
@@ -209,7 +228,7 @@ public class Linkme extends JavaPlugin
                 player.sendMessage("Link Me config has been reloaded!");
             }
         }
-        return false;
+        return false; */
     }
 
 }
