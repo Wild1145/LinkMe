@@ -1,6 +1,6 @@
-
 name: LinkMe
 main: me.RyanWild.LinkMe.Linkme
+dev-url: http://dev.bukkit.org/bukkit-plugins/linkme/
 version: 1.0.1
 description: Link Me
 
@@ -48,3 +48,6 @@ commands:
   bvoice:
     description: Broadcasts all voice servers
     permissions: linkme.broadcast.voice
+  lmreload:
+    description: Reloads LinkMe
+    permissions: linkme.reload
