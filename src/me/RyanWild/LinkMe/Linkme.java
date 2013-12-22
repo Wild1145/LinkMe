@@ -48,7 +48,7 @@ public class Linkme extends JavaPlugin
         {
             System.out.println("[" + getDescription().getName() + "] Error Submitting stats!");
         }
-        
+
         Bukkit.broadcastMessage(getConfig().getString("announcer") + ": LinkMe Plugin by Wild1145 & Kyle1986 has been Enabled! ");
     }
 
@@ -208,10 +208,11 @@ public class Linkme extends JavaPlugin
         {
             if (player.hasPermission("linkme.reload"))
             {
-            this.reloadConfig();
-            player.sendMessage("Link Me config has been reloaded!");
-        }  
+                this.reloadConfig();
+                player.sendMessage("Link Me config has been reloaded!");
+            }
         }
         return false;
     }
+
 }
