@@ -11,10 +11,8 @@ commands:
     description: Forums
   bforum:
     description: Broadcast forums
-    permissions: linkme.broadcast.forum
   bsite:
     description: Broadcast site website
-    permissions: linkme.broadcast.site
   mum:
     description: Mumble Server address
   linkme:
@@ -29,25 +27,19 @@ commands:
     description: Facebook Page
   bfacebook:
     description: Broadcast Facebook Page
-    permissions: linkme.broadcast.facebook
   youtube:
     description: Youtube Page
   byoutube:
     description: Broadcast Youtube Page
-    permissions: linkme.broadcast.youtube
   twitter:
     description: Twitter Url 
   btwitter:
     description: Broadcast Twitter Url
-    permissions: linkme.broadcast.twitter
   donator:
     description: Donation Page
   bdonator:
     description: Broadcast Donation Page
-    permissions: linkme.broadcast.donator
   bvoice:
     description: Broadcasts all voice servers
-    permissions: linkme.broadcast.voice
   lmreload:
     description: Reloads LinkMe
-    permissions: linkme.reload

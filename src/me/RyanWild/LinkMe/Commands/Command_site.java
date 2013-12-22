@@ -8,7 +8,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>")
+@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>",permission="linkme.site")
 public class Command_site extends BukkitCommand {
     
     
