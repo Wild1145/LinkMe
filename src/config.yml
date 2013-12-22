@@ -1,5 +1,5 @@
 #########################
-####  LINK-ME V2.0    ###
+####  LINK-ME V2.2    ###
 #########################
 
 
@@ -68,5 +68,11 @@ votetext: Our Website is located at
 
 # Vote url goes here
 vote: http://www.website.com
+
+# Ranking up text goes here this is what is displayed before the URL
+ranktext: Our Website is located at
+
+# ranks url goes here
+rankurl: http://www.website.com
 
 # END OF CONFIG

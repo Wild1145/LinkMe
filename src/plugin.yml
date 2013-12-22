@@ -1,7 +1,7 @@
 name: LinkMe
 main: me.RyanWild.LinkMe.Linkme
 dev-url: http://dev.bukkit.org/bukkit-plugins/linkme/
-version: 2.1
+version: 2.2
 description: Link Me
 
 commands:
@@ -47,3 +47,7 @@ commands:
     description: Displays Voting information and URL
   bvote:
     description: Broadcasts the Vote information
+  rankup:
+    description: Displays all the information about how to rank up and includes a link
+  brankup:
+    description: Broadcasts all the information about how to rank up and includes a link
