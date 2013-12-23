@@ -15,10 +15,6 @@ commands:
     description: Broadcast site website
   mum:
     description: Mumble Server address
-  linkme:
-    description: List all commands
-  lm:
-    description: List all commands
   ts:
     description: TS3 IP
   vent:
