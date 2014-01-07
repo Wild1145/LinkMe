@@ -47,7 +47,7 @@ public class Linkme extends JavaPlugin
         config.load();
         
         PluginDescriptionFile pdfFile = this.getDescription();
-        Linkme.logger.log(Level.INFO, "{0} Version{1} Has Been Enabled", new Object[]
+        Linkme.logger.info("{0} Version{1} Has Been Enabled", new Object[]
         {
             pdfFile.getName(), pdfFile.getVersion()
         });
@@ -61,7 +61,7 @@ public class Linkme extends JavaPlugin
         }
         catch (IOException e)
         {
-            System.out.println("[" + getDescription().getName() + "] Error Submitting stats!");
+            Linkme.logger.severe("[" + getDescription().getName() + "] Error Submitting stats!");
         }
 
         Bukkit.broadcastMessage(Linkme.config.getString("announcer") + ": LinkMe Plugin by Wild1145 & Kyle1986 has been Enabled! ");
