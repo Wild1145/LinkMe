@@ -16,11 +16,9 @@ public class Command_bdonator extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-
-        Player player = (Player) commandSender;
-
-        Bukkit.broadcastMessage(Linkme.config.getString("announcer") + ": " + (Linkme.config.getString("donatordesc") + ": " + Linkme.config.getString("donatorurl")));
-        
+    String donatordesc = Linkme.config.getString("donatordesc");
+    String donatordesc1 = Utils_Colour.replaceColors(donatordesc);
+    Bukkit.broadcastMessage(donatordesc1);
         return false;
     }
 

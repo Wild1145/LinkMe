@@ -47,7 +47,7 @@ public class Linkme extends JavaPlugin
         config.load();
         
         PluginDescriptionFile pdfFile = this.getDescription();
-        Linkme.logger.info("{0} Version{1} Has Been Enabled", new Object[]
+        Linkme.logger.log(Level.INFO, "{0} Version{1} Has Been Enabled", new Object[]{pdfFile.getName(), pdfFile.getVersion()});
         {
             pdfFile.getName(), pdfFile.getVersion()
         });
