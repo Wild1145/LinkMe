@@ -1,5 +1,5 @@
 #########################
-####  LINK-ME V2.2    ###
+####  LINK-ME V2.3    ###
 #########################
 
 
@@ -47,6 +47,12 @@ youtubedesc: 'Come visit our Youtube page at'
 
 # Youtube Server Url goes here
 youtubeurl: 'http://youtube.com/usernamehere'
+
+# Twitch text goes here this is what is displayed before the Twitch url
+twitchdesc: 'Come visit our Twitch steam at'
+
+# Twitch Stream Url goes here
+twitchurl: 'http://www.twitch.tv/usernamehere'
 
 # Twitter text goes here this is what is displayed before the Twitter URL or @tag
 twitterdesc: 'Come visit our Twitter feed at'
