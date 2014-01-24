@@ -1,4 +1,5 @@
 package me.RyanWild.LinkMe.Commands;
+
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
