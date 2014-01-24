@@ -13,14 +13,14 @@ public class Command_ts extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-         Player player = (Player) commandSender;
-         String announcer = Linkme.config.getString("announcer");
-         String announcer1 = Utils_Colour.replaceColors(announcer);
-         String ts3desc = Linkme.config.getString("ts3desc");
-         String ts3desc1 = Utils_Colour.replaceColors(ts3desc);
-         String ts3ip = Linkme.config.getString("ts3ip");
-         String ts3ip1 = Utils_Colour.replaceColors(ts3ip);
-         player.sendMessage(announcer1 + ": " + ts3desc1 + " "+ ts3ip1);
-        return false;
+    Player player = (Player) commandSender;
+    String announcer = Linkme.config.getString("announcer");
+    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String ts3desc = Linkme.config.getString("ts3desc");
+    String ts3desc1 = Utils_Colour.replaceColors(ts3desc);
+    String ts3ip = Linkme.config.getString("ts3ip");
+    String ts3ip1 = Utils_Colour.replaceColors(ts3ip);
+    player.sendMessage(announcer1 + ": " + ts3desc1 + " "+ ts3ip1);
+    return false;
     }
 }

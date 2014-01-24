@@ -13,14 +13,14 @@ public class Command_vote extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-        Player player = (Player) commandSender;
-        String announcer = Linkme.config.getString("announcer");
-        String announcer1 = Utils_Colour.replaceColors(announcer);
-        String votedesc = Linkme.config.getString("votedesc");
-        String votedesc1 = Utils_Colour.replaceColors(votedesc);
-        String voteurl = Linkme.config.getString("voteurl");
-        String voteurl1 = Utils_Colour.replaceColors(voteurl);
-        player.sendMessage(announcer1 + ": " + votedesc1 + " "+ voteurl1);  
-        return false;
+    Player player = (Player) commandSender;
+    String announcer = Linkme.config.getString("announcer");
+    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String votedesc = Linkme.config.getString("votedesc");
+    String votedesc1 = Utils_Colour.replaceColors(votedesc);
+    String voteurl = Linkme.config.getString("voteurl");
+    String voteurl1 = Utils_Colour.replaceColors(voteurl);
+    player.sendMessage(announcer1 + ": " + votedesc1 + " "+ voteurl1);  
+    return false;
     }
 }

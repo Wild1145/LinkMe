@@ -15,7 +15,6 @@ public class Command_bdonator extends BukkitCommand
     {
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = Utils_Colour.replaceColors(announcer);
-        
     String donatordesc = Linkme.config.getString("donatordesc");
     String donatordesc1 = Utils_Colour.replaceColors(donatordesc);
     Bukkit.broadcastMessage(announcer1 + ": " + donatordesc1);

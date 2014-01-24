@@ -13,14 +13,14 @@ public class Command_forum extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-        Player player = (Player) commandSender;
-        String announcer = Linkme.config.getString("announcer");
-        String announcer1 = Utils_Colour.replaceColors(announcer);
-        String forumtext = Linkme.config.getString("forumtext");
-        String forumtext1 = Utils_Colour.replaceColors(forumtext);
-        String forum = Linkme.config.getString("forum");
-        String forum1 = Utils_Colour.replaceColors(forum);
-        player.sendMessage(announcer1 + ": " + forumtext1 + " "+ forum1);
-        return false;
+    Player player = (Player) commandSender;
+    String announcer = Linkme.config.getString("announcer");
+    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String forumtext = Linkme.config.getString("forumtext");
+    String forumtext1 = Utils_Colour.replaceColors(forumtext);
+    String forum = Linkme.config.getString("forum");
+    String forum1 = Utils_Colour.replaceColors(forum);
+    player.sendMessage(announcer1 + ": " + forumtext1 + " "+ forum1);
+    return false;
     }
 }
