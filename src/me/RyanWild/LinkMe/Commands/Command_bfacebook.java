@@ -22,10 +22,11 @@ public class Command_bfacebook extends BukkitCommand
     String facebookurl = Linkme.config.getString("Facebook.info.url");
     String facebookurl1 = LinkMe_Utils.replaceColors(facebookurl);
     String Status = Linkme.config.getString("Facebook.info.enabled");
+    Player player = (Player) commandSender;
          if (Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(announcer1 + ": " + facebookdesc1 + " "+ facebookurl1); 
         } else {
-            Player player = (Player) commandSender;
+
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
         return false;

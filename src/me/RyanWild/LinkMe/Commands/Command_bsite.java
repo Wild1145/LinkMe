@@ -22,10 +22,10 @@ public class Command_bsite extends BukkitCommand
     String siteurl = Linkme.config.getString("Website.info.url");
     String siteurl1 = LinkMe_Utils.replaceColors(siteurl);
     String Status = Linkme.config.getString("Website.info.enabled");
+    Player player = (Player) commandSender;
          if (Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(announcer1 + ": " + sitedesc1 + " "+ siteurl1);
         } else {
-            Player player = (Player) commandSender;
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
         return false;

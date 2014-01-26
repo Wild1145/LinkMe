@@ -5,6 +5,7 @@ import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
 import net.pravian.bukkitlib.command.SourceType;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -14,14 +15,19 @@ public class Command_youtube extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-        Player player = (Player) commandSender;
-        String announcer = Linkme.config.getString("announcer");
-        String announcer1 = LinkMe_Utils.replaceColors(announcer);
-        String youtubedesc = Linkme.config.getString("youtubedesc");
-        String youtubedesc1 = LinkMe_Utils.replaceColors(youtubedesc);
-        String youtubeurl = Linkme.config.getString("youtubeurl");
-        String youtubeurl1 = LinkMe_Utils.replaceColors(youtubeurl);
-        player.sendMessage(announcer1 + ": " + youtubedesc1 + " "+ youtubeurl1);
+    String announcer = Linkme.config.getString("announcer");
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
+    String youtubedesc = Linkme.config.getString("Youtube.info.description");
+    String youtubedesc1 = LinkMe_Utils.replaceColors(youtubedesc);
+    String youtubeurl = Linkme.config.getString("Youtube.info.url");
+    String youtubeurl1 = LinkMe_Utils.replaceColors(youtubeurl);
+    String Status = Linkme.config.getString("Youtube.info.enabled");
+    Player player = (Player) commandSender;
+         if (Status.equalsIgnoreCase("true")){
+            player.sendMessage(announcer1 + ": " + youtubedesc1 + " "+ youtubeurl1);
+        } else {
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
         return false;
     }
 }

@@ -22,10 +22,10 @@ public class Command_byoutube extends BukkitCommand
     String youtubeurl = Linkme.config.getString("Youtube.info.url");
     String youtubeurl1 = LinkMe_Utils.replaceColors(youtubeurl);
     String Status = Linkme.config.getString("Youtube.info.enabled");
+    Player player = (Player) commandSender;
          if (Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(announcer1 + ": " + youtubedesc1 + " "+ youtubeurl1);
         } else {
-            Player player = (Player) commandSender;
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
         return false;

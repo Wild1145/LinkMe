@@ -22,10 +22,10 @@ public class Command_bforum extends BukkitCommand
     String forumurl = Linkme.config.getString("Forums.info.url");
     String forumurl1 = LinkMe_Utils.replaceColors(forumurl);
     String Status = Linkme.config.getString("Forums.info.enabled");
+    Player player = (Player) commandSender;
          if (Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(announcer1 + ": " + forumdesc1 + " "+ forumurl1);
         } else {
-            Player player = (Player) commandSender;
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
         return false;

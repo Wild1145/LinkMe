@@ -14,14 +14,19 @@ public class Command_forum extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-    Player player = (Player) commandSender;
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String forumtext = Linkme.config.getString("forumtext");
-    String forumtext1 = LinkMe_Utils.replaceColors(forumtext);
-    String forum = Linkme.config.getString("forum");
-    String forum1 = LinkMe_Utils.replaceColors(forum);
-    player.sendMessage(announcer1 + ": " + forumtext1 + " "+ forum1);
-    return false;
+    String forumdesc = Linkme.config.getString("Forums.info.description");
+    String forumdesc1 = LinkMe_Utils.replaceColors(forumdesc);
+    String forumurl = Linkme.config.getString("Forums.info.url");
+    String forumurl1 = LinkMe_Utils.replaceColors(forumurl);
+    String Status = Linkme.config.getString("Forums.info.enabled");
+    Player player = (Player) commandSender;
+         if (Status.equalsIgnoreCase("true")){
+            player.sendMessage(announcer1 + ": " + forumdesc1 + " "+ forumurl1);
+        } else {
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
+        return false;
     }
 }

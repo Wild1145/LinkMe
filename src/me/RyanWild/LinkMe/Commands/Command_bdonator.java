@@ -22,10 +22,10 @@ public class Command_bdonator extends BukkitCommand
     String donatorurl = Linkme.config.getString("Donator.info.url");
     String donatorurl1 = LinkMe_Utils.replaceColors(donatorurl);
     String Status = Linkme.config.getString("Donator.info.enabled");
+    Player player = (Player) commandSender;
          if (Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(announcer1 + ": " + donatordesc1 + " " + donatorurl1);   
         } else {
-            Player player = (Player) commandSender;
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
         return false;

@@ -14,14 +14,19 @@ public class Command_twitter extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-    Player player = (Player) commandSender;
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String twitterdesc = Linkme.config.getString("twitterdesc");
+    String twitterdesc = Linkme.config.getString("Twitter.info.description");
     String twitterdesc1 = LinkMe_Utils.replaceColors(twitterdesc);
-    String twitterurl = Linkme.config.getString("twitterurl");
+    String twitterurl = Linkme.config.getString("Twitter.info.url");
     String twitterurl1 = LinkMe_Utils.replaceColors(twitterurl);
-    player.sendMessage(announcer1 + ": " + twitterdesc1 + " "+ twitterurl1);
-    return false;
+    String Status = Linkme.config.getString("Twitter.info.enabled");
+    Player player = (Player) commandSender;
+         if (Status.equalsIgnoreCase("true")){
+            player.sendMessage(announcer1 + ": " + twitterdesc1 + " "+ twitterurl1);
+        } else {
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
+        return false;
     }
 }

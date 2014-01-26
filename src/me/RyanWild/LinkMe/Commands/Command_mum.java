@@ -14,14 +14,19 @@ public class Command_mum extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-    Player player = (Player) commandSender;
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String mumbledesc = Linkme.config.getString("mumbledesc");
-    String mumbledesc1 = LinkMe_Utils.replaceColors(mumbledesc);
-    String mumbleip = Linkme.config.getString("mumbleip");
-    String mumbleip1 = LinkMe_Utils.replaceColors(mumbleip);
-    player.sendMessage(announcer1 + ": " + mumbledesc1 + " "+ mumbleip1);
+    String Mumbledesc = Linkme.config.getString("Mumble.info.description");
+    String Mumbledesc1 = LinkMe_Utils.replaceColors(Mumbledesc);
+    String Mumbleip = Linkme.config.getString("Mumble.info.url");
+    String Mumbleip1 = LinkMe_Utils.replaceColors(Mumbleip);
+    String Status = Linkme.config.getString("Mumble.info.enabled");
+    Player player = (Player) commandSender;
+         if (Status.equalsIgnoreCase("true")){
+            player.sendMessage(announcer1 + ": " + Mumbledesc1 + " "+ Mumbleip1);
+        } else {
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
         return false;
     }
 }

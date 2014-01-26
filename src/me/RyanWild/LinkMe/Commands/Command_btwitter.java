@@ -22,10 +22,10 @@ public class Command_btwitter extends BukkitCommand
     String twitterurl = Linkme.config.getString("Twitter.info.url");
     String twitterurl1 = LinkMe_Utils.replaceColors(twitterurl);
     String Status = Linkme.config.getString("Twitter.info.enabled");
+    Player player = (Player) commandSender;
          if (Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(announcer1 + ": " + twitterdesc1 + " "+ twitterurl1);
         } else {
-            Player player = (Player) commandSender;
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
         return false;

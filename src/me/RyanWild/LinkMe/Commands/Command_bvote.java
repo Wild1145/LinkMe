@@ -22,10 +22,10 @@ public class Command_bvote extends BukkitCommand
     String voteurl = Linkme.config.getString("vote");
     String voteurl1 = LinkMe_Utils.replaceColors(voteurl);
     String Status = Linkme.config.getString("Voting.info.enabled");
+    Player player = (Player) commandSender;
          if (Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(announcer1 + ": " + votedesc1 + " "+ voteurl1);
         } else {
-            Player player = (Player) commandSender;
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
         return false;

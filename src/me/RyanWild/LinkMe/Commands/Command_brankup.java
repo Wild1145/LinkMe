@@ -20,10 +20,10 @@ public class Command_brankup extends BukkitCommand
     String rankdesc = Linkme.config.getString("RankingUp.info.description");
     String rankdesc1 = LinkMe_Utils.replaceColors(rankdesc);
     String Status = Linkme.config.getString("RankingUp.info.enabled");
+    Player player = (Player) commandSender;
          if (Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(announcer1 + ": " + rankdesc1);
         } else {
-            Player player = (Player) commandSender;
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
         return false;

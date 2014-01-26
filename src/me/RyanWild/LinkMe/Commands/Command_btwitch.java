@@ -22,10 +22,10 @@ public class Command_btwitch extends BukkitCommand
     String twitchurl = Linkme.config.getString("Twitch.info.url");
     String twitchurl1 = LinkMe_Utils.replaceColors(twitchurl);
     String Status = Linkme.config.getString("Website.info.enabled");
+    Player player = (Player) commandSender;
          if (Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(announcer1 + ": " + twitchdesc1 + " "+ twitchurl1);
         } else {
-            Player player = (Player) commandSender;
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
         return false;

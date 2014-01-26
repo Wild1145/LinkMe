@@ -14,14 +14,17 @@ public class Command_rankup extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-    Player player = (Player) commandSender;
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String ranktext = Linkme.config.getString("ranktext");
-    String ranktext1 = LinkMe_Utils.replaceColors(ranktext);
-    String rankurl = Linkme.config.getString("rankurl");
-    String rankurl1 = LinkMe_Utils.replaceColors(rankurl);
-    player.sendMessage(announcer1 + ": " + ranktext1 + " "+ rankurl1);
-    return false;
+    String rankdesc = Linkme.config.getString("RankingUp.info.description");
+    String rankdesc1 = LinkMe_Utils.replaceColors(rankdesc);
+    String Status = Linkme.config.getString("RankingUp.info.enabled");
+    Player player = (Player) commandSender;
+         if (Status.equalsIgnoreCase("true")){
+            player.sendMessage(announcer1 + ": " + rankdesc1);
+        } else {
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
+        return false;
     }
 }

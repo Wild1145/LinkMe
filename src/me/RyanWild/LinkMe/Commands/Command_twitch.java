@@ -14,14 +14,19 @@ public class Command_twitch extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-    Player player = (Player) commandSender;
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String twitchdesc = Linkme.config.getString("twitchdesc");
+    String twitchdesc = Linkme.config.getString("Twitch.info.description");
     String twitchdesc1 = LinkMe_Utils.replaceColors(twitchdesc);
-    String twitchurl = Linkme.config.getString("twitchurl");
+    String twitchurl = Linkme.config.getString("Twitch.info.url");
     String twitchurl1 = LinkMe_Utils.replaceColors(twitchurl);
-    player.sendMessage(announcer1 + ": " + twitchdesc1 + " "+ twitchurl1);
-    return false;
+    String Status = Linkme.config.getString("Website.info.enabled");
+    Player player = (Player) commandSender;
+         if (Status.equalsIgnoreCase("true")){
+            player.sendMessage(announcer1 + ": " + twitchdesc1 + " "+ twitchurl1);
+        } else {
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
+        return false;
     }
 }
