@@ -8,6 +8,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.byoutube")
 public class Command_byoutube extends BukkitCommand
 {
@@ -16,11 +17,17 @@ public class Command_byoutube extends BukkitCommand
     {
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String youtubedesc = Linkme.config.getString("youtubedesc");
+    String youtubedesc = Linkme.config.getString("Youtube.info.description");
     String youtubedesc1 = LinkMe_Utils.replaceColors(youtubedesc);
-    String youtubeurl = Linkme.config.getString("youtubeurl");
+    String youtubeurl = Linkme.config.getString("Youtube.info.url");
     String youtubeurl1 = LinkMe_Utils.replaceColors(youtubeurl);
-    Bukkit.broadcastMessage(announcer1 + ": " + youtubedesc1 + " "+ youtubeurl1);
+    String Status = Linkme.config.getString("Youtube.info.enabled");
+         if (Status.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(announcer1 + ": " + youtubedesc1 + " "+ youtubeurl1);
+        } else {
+            Player player = (Player) commandSender;
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
         return false;
     }
 }

@@ -8,6 +8,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.btwitter")
 public class Command_btwitter extends BukkitCommand
 {
@@ -16,11 +17,17 @@ public class Command_btwitter extends BukkitCommand
     {
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String twitterdesc = Linkme.config.getString("twitterdesc");
+    String twitterdesc = Linkme.config.getString("Twitter.info.description");
     String twitterdesc1 = LinkMe_Utils.replaceColors(twitterdesc);
-    String twitterurl = Linkme.config.getString("twitterurl");
+    String twitterurl = Linkme.config.getString("Twitter.info.url");
     String twitterurl1 = LinkMe_Utils.replaceColors(twitterurl);
-    Bukkit.broadcastMessage(announcer1 + ": " + twitterdesc1 + " "+ twitterurl1);
+    String Status = Linkme.config.getString("Twitter.info.enabled");
+         if (Status.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(announcer1 + ": " + twitterdesc1 + " "+ twitterurl1);
+        } else {
+            Player player = (Player) commandSender;
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
         return false;
     }
 }

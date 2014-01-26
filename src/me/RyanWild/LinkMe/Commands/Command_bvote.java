@@ -8,6 +8,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "blinkme.bvote")
 public class Command_bvote extends BukkitCommand
 {
@@ -16,11 +17,17 @@ public class Command_bvote extends BukkitCommand
     {
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String votetext = Linkme.config.getString("votetext");
-    String votetext1 = LinkMe_Utils.replaceColors(votetext);
-    String vote = Linkme.config.getString("vote");
-    String vote1 = LinkMe_Utils.replaceColors(vote);
-    Bukkit.broadcastMessage(announcer1 + ": " + votetext1 + " "+ vote1);
+    String votedesc = Linkme.config.getString("Voting.info.description");
+    String votedesc1 = LinkMe_Utils.replaceColors(votedesc);
+    String voteurl = Linkme.config.getString("vote");
+    String voteurl1 = LinkMe_Utils.replaceColors(voteurl);
+    String Status = Linkme.config.getString("Voting.info.enabled");
+         if (Status.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(announcer1 + ": " + votedesc1 + " "+ voteurl1);
+        } else {
+            Player player = (Player) commandSender;
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
         return false;
     }
 }
