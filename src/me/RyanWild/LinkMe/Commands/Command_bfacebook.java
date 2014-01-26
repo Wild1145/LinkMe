@@ -1,5 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
+import me.RyanWild.LinkMe.LinkMe_Utils;
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -14,11 +15,11 @@ public class Command_bfacebook extends BukkitCommand
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
     String announcer = Linkme.config.getString("announcer");
-    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
     String facebookdesc = Linkme.config.getString("facebookdesc");
-    String facebookdesc1 = Utils_Colour.replaceColors(facebookdesc);
+    String facebookdesc1 = LinkMe_Utils.replaceColors(facebookdesc);
     String facebookurl = Linkme.config.getString("facebookurl");
-    String facebookurl1 = Utils_Colour.replaceColors(facebookurl);
+    String facebookurl1 = LinkMe_Utils.replaceColors(facebookurl);
     Bukkit.broadcastMessage(announcer1 + ": " + facebookdesc1 + " "+ facebookurl1);
         return false;
     }

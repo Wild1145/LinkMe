@@ -1,6 +1,6 @@
-package me.RyanWild.LinkMe.Commands;
+package me.RyanWild.LinkMe;
 
-public class Utils_Colour {
+public class LinkMe_Utils {
     public static final char ESCAPE = '\u00A7';
     public static String replaceColors(String text) {
         char[] chrarray = text.toCharArray();

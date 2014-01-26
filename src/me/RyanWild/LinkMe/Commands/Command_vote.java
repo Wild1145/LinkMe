@@ -1,5 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
+import me.RyanWild.LinkMe.LinkMe_Utils;
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -15,11 +16,11 @@ public class Command_vote extends BukkitCommand
     {
     Player player = (Player) commandSender;
     String announcer = Linkme.config.getString("announcer");
-    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
     String votedesc = Linkme.config.getString("votedesc");
-    String votedesc1 = Utils_Colour.replaceColors(votedesc);
+    String votedesc1 = LinkMe_Utils.replaceColors(votedesc);
     String voteurl = Linkme.config.getString("voteurl");
-    String voteurl1 = Utils_Colour.replaceColors(voteurl);
+    String voteurl1 = LinkMe_Utils.replaceColors(voteurl);
     player.sendMessage(announcer1 + ": " + votedesc1 + " "+ voteurl1);  
     return false;
     }

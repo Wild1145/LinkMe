@@ -1,5 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
+import me.RyanWild.LinkMe.LinkMe_Utils;
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -15,11 +16,11 @@ public class Command_site extends BukkitCommand
     {
     Player player = (Player) commandSender;
     String announcer = Linkme.config.getString("announcer");
-    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
     String sitetext = Linkme.config.getString("sitetext");
-    String sitetext1 = Utils_Colour.replaceColors(sitetext);
+    String sitetext1 = LinkMe_Utils.replaceColors(sitetext);
     String site = Linkme.config.getString("site");
-    String site1 = Utils_Colour.replaceColors(site);
+    String site1 = LinkMe_Utils.replaceColors(site);
     player.sendMessage(announcer1 + ": " + sitetext1 + " "+ site1);
     return false;
     }

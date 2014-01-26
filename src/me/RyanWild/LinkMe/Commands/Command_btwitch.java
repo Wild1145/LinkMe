@@ -1,5 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
+import me.RyanWild.LinkMe.LinkMe_Utils;
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -14,11 +15,11 @@ public class Command_btwitch extends BukkitCommand
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
     String announcer = Linkme.config.getString("announcer");
-    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
     String twitchdesc = Linkme.config.getString("twitchdesc");
-    String twitchdesc1 = Utils_Colour.replaceColors(twitchdesc);
+    String twitchdesc1 = LinkMe_Utils.replaceColors(twitchdesc);
     String twitchurl = Linkme.config.getString("twitchurl");
-    String twitchurl1 = Utils_Colour.replaceColors(twitchurl);
+    String twitchurl1 = LinkMe_Utils.replaceColors(twitchurl);
     Bukkit.broadcastMessage(announcer1 + ": " + twitchdesc1 + " "+ twitchurl1);
     return false;
     }

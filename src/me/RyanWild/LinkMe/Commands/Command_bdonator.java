@@ -1,5 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
+import me.RyanWild.LinkMe.LinkMe_Utils;
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -14,9 +15,9 @@ public class Command_bdonator extends BukkitCommand
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
     String announcer = Linkme.config.getString("announcer");
-    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
     String donatordesc = Linkme.config.getString("donatordesc");
-    String donatordesc1 = Utils_Colour.replaceColors(donatordesc);
+    String donatordesc1 = LinkMe_Utils.replaceColors(donatordesc);
     Bukkit.broadcastMessage(announcer1 + ": " + donatordesc1);
         return false;
     }

@@ -1,5 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
+import me.RyanWild.LinkMe.LinkMe_Utils;
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -15,11 +16,11 @@ public class Command_vent extends BukkitCommand
     {
     Player player = (Player) commandSender;
     String announcer = Linkme.config.getString("announcer");
-    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
     String ventdesc = Linkme.config.getString("ventdesc");
-    String ventdesc1 = Utils_Colour.replaceColors(ventdesc);
+    String ventdesc1 = LinkMe_Utils.replaceColors(ventdesc);
     String venturl = Linkme.config.getString("venturl");
-    String venturl1 = Utils_Colour.replaceColors(venturl);
+    String venturl1 = LinkMe_Utils.replaceColors(venturl);
     player.sendMessage(announcer1 + ": " + ventdesc1 + " "+ venturl1);
     return false;
     }

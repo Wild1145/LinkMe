@@ -1,5 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
+import me.RyanWild.LinkMe.LinkMe_Utils;
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -14,11 +15,11 @@ public class Command_bforum extends BukkitCommand
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
     String announcer = Linkme.config.getString("announcer");
-    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
     String forumtext = Linkme.config.getString("forumtext");
-    String forumtext1 = Utils_Colour.replaceColors(forumtext);
+    String forumtext1 = LinkMe_Utils.replaceColors(forumtext);
     String forum = Linkme.config.getString("forum");
-    String forum1 = Utils_Colour.replaceColors(forum);
+    String forum1 = LinkMe_Utils.replaceColors(forum);
     Bukkit.broadcastMessage(announcer1 + ": " + forumtext1 + " "+ forum1);
         return false;
     }

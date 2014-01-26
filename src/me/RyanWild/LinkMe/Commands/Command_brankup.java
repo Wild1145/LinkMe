@@ -1,5 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
+import me.RyanWild.LinkMe.LinkMe_Utils;
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -14,11 +15,11 @@ public class Command_brankup extends BukkitCommand
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
     String announcer = Linkme.config.getString("announcer");
-    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
     String ranktext = Linkme.config.getString("ranktext");
-    String ranktext1 = Utils_Colour.replaceColors(ranktext);
+    String ranktext1 = LinkMe_Utils.replaceColors(ranktext);
     String rankurl = Linkme.config.getString("rankurl");
-    String rankurl1 = Utils_Colour.replaceColors(rankurl);
+    String rankurl1 = LinkMe_Utils.replaceColors(rankurl);
     Bukkit.broadcastMessage(announcer1 + ": " + ranktext1 + " "+ rankurl1);
         return false;
     }

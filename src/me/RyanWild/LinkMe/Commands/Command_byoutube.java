@@ -1,5 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
+import me.RyanWild.LinkMe.LinkMe_Utils;
 import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -14,11 +15,11 @@ public class Command_byoutube extends BukkitCommand
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
     String announcer = Linkme.config.getString("announcer");
-    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String announcer1 = LinkMe_Utils.replaceColors(announcer);
     String youtubedesc = Linkme.config.getString("youtubedesc");
-    String youtubedesc1 = Utils_Colour.replaceColors(youtubedesc);
+    String youtubedesc1 = LinkMe_Utils.replaceColors(youtubedesc);
     String youtubeurl = Linkme.config.getString("youtubeurl");
-    String youtubeurl1 = Utils_Colour.replaceColors(youtubeurl);
+    String youtubeurl1 = LinkMe_Utils.replaceColors(youtubeurl);
     Bukkit.broadcastMessage(announcer1 + ": " + youtubedesc1 + " "+ youtubeurl1);
         return false;
     }
