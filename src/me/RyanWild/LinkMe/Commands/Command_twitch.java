@@ -7,8 +7,8 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.facebook")
-public class Command_facebook extends BukkitCommand
+@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.twitch")
+public class Command_twitch extends BukkitCommand
 {
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
@@ -16,11 +16,11 @@ public class Command_facebook extends BukkitCommand
     Player player = (Player) commandSender;
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = Utils_Colour.replaceColors(announcer);
-    String facebookdesc = Linkme.config.getString("facebookdesc");
-    String facebookdesc1 = Utils_Colour.replaceColors(facebookdesc);
-    String facebookurl = Linkme.config.getString("facebookurl");
-    String facebookurl1 = Utils_Colour.replaceColors(facebookurl);
-    player.sendMessage(announcer1 + ": " + facebookdesc1 + " "+ facebookurl1);
-        return false;
+    String twitchdesc = Linkme.config.getString("twitchdesc");
+    String twitchdesc1 = Utils_Colour.replaceColors(twitchdesc);
+    String twitchurl = Linkme.config.getString("twitchurl");
+    String twitchurl1 = Utils_Colour.replaceColors(twitchurl);
+    player.sendMessage(announcer1 + ": " + twitchdesc1 + " "+ twitchurl1);
+    return false;
     }
 }

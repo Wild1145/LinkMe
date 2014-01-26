@@ -7,21 +7,19 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.bsite")
 public class Command_bsite extends BukkitCommand
 {
-
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-
-        Player player = (Player) commandSender;
-
-        Bukkit.broadcastMessage(Linkme.config.getString("announcer") + ": " + (Linkme.config.getString("sitetext") + ": " + Linkme.config.getString("site")));
-
+    String announcer = Linkme.config.getString("announcer");
+    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String sitetext = Linkme.config.getString("sitetext");
+    String sitetext1 = Utils_Colour.replaceColors(sitetext);
+    String site = Linkme.config.getString("site");
+    String site1 = Utils_Colour.replaceColors(site);
+    Bukkit.broadcastMessage(announcer1 + ": " + sitetext1 + " "+ site1);
         return false;
     }
-
 }

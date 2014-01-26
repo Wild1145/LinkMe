@@ -7,21 +7,19 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "blinkme.brankup")
 public class Command_brankup extends BukkitCommand
 {
-
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-
-        Player player = (Player) commandSender;
-
-        Bukkit.broadcastMessage(Linkme.config.getString("announcer") + ": " + (Linkme.config.getString("ranktext") + ": " + Linkme.config.getString("rankurl")));
-
+    String announcer = Linkme.config.getString("announcer");
+    String announcer1 = Utils_Colour.replaceColors(announcer);
+    String ranktext = Linkme.config.getString("ranktext");
+    String ranktext1 = Utils_Colour.replaceColors(ranktext);
+    String rankurl = Linkme.config.getString("rankurl");
+    String rankurl1 = Utils_Colour.replaceColors(rankurl);
+    Bukkit.broadcastMessage(announcer1 + ": " + ranktext1 + " "+ rankurl1);
         return false;
     }
-
 }

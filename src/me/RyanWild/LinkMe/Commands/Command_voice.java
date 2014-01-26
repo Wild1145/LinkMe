@@ -4,27 +4,36 @@ import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
 import net.pravian.bukkitlib.command.SourceType;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.voice")
 public class Command_voice extends BukkitCommand
 {
-
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-
         Player player = (Player) commandSender;
-
-        player.sendMessage(Linkme.config.getString("announcer") + ": " + (Linkme.config.getString("voiceserverlist")));
-        player.sendMessage(Linkme.config.getString("announcer") + ": " + (Linkme.config.getString("mumbledesc") + ": " + Linkme.config.getString("mumbleip")));
-        player.sendMessage(Linkme.config.getString("announcer") + ": " + (Linkme.config.getString("ventdesc") + ": " + Linkme.config.getString("ventip")));
-        player.sendMessage(Linkme.config.getString("announcer") + ": " + (Linkme.config.getString("ts3desc") + ": " + Linkme.config.getString("ts3ip")));
-
+        String announcer = Linkme.config.getString("announcer");
+        String announcer1 = Utils_Colour.replaceColors(announcer);
+        String voiceserverlist = Linkme.config.getString("voiceserverlist");
+        String voiceserverlist1 = Utils_Colour.replaceColors(voiceserverlist);
+        String mumbledesc = Linkme.config.getString("mumbledesc");
+        String mumbledesc1 = Utils_Colour.replaceColors(mumbledesc);
+        String mumbleip = Linkme.config.getString("mumbleip");
+        String mumbleip1 = Utils_Colour.replaceColors(mumbleip);
+        String ventdesc = Linkme.config.getString("ventdesc");
+        String ventdesc1 = Utils_Colour.replaceColors(ventdesc);
+        String venturl = Linkme.config.getString("venturl");
+        String venturl1 = Utils_Colour.replaceColors(venturl);
+        String ts3desc = Linkme.config.getString("ts3desc");
+        String ts3desc1 = Utils_Colour.replaceColors(ts3desc);
+        String ts3ip = Linkme.config.getString("ts3ip");
+        String ts3ip1 = Utils_Colour.replaceColors(ts3ip);
+        player.sendMessage(announcer1 + ": " + voiceserverlist1);
+        player.sendMessage(mumbledesc1 + ": " + mumbleip1);
+        player.sendMessage(ventdesc1 + ": " + venturl1);
+        player.sendMessage(ts3desc1 + ": " + ts3ip1);
         return false;
     }
-
 }
