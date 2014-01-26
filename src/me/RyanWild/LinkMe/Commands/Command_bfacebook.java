@@ -8,6 +8,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.bfacebook")
 public class Command_bfacebook extends BukkitCommand
 {
@@ -16,11 +17,17 @@ public class Command_bfacebook extends BukkitCommand
     {
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String facebookdesc = Linkme.config.getString("facebookdesc");
+    String facebookdesc = Linkme.config.getString("Facebook.info.description");
     String facebookdesc1 = LinkMe_Utils.replaceColors(facebookdesc);
-    String facebookurl = Linkme.config.getString("facebookurl");
+    String facebookurl = Linkme.config.getString("Facebook.info.url");
     String facebookurl1 = LinkMe_Utils.replaceColors(facebookurl);
-    Bukkit.broadcastMessage(announcer1 + ": " + facebookdesc1 + " "+ facebookurl1);
+    String Status = Linkme.config.getString("Facebook.info.enabled");
+         if (Status.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(announcer1 + ": " + facebookdesc1 + " "+ facebookurl1); 
+        } else {
+            Player player = (Player) commandSender;
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
         return false;
     }
 }

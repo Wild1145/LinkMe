@@ -8,6 +8,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "blinkme.brankup")
 public class Command_brankup extends BukkitCommand
 {
@@ -16,11 +17,15 @@ public class Command_brankup extends BukkitCommand
     {
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String ranktext = Linkme.config.getString("ranktext");
-    String ranktext1 = LinkMe_Utils.replaceColors(ranktext);
-    String rankurl = Linkme.config.getString("rankurl");
-    String rankurl1 = LinkMe_Utils.replaceColors(rankurl);
-    Bukkit.broadcastMessage(announcer1 + ": " + ranktext1 + " "+ rankurl1);
+    String rankdesc = Linkme.config.getString("RankingUp.info.description");
+    String rankdesc1 = LinkMe_Utils.replaceColors(rankdesc);
+    String Status = Linkme.config.getString("RankingUp.info.enabled");
+         if (Status.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(announcer1 + ": " + rankdesc1);
+        } else {
+            Player player = (Player) commandSender;
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
         return false;
     }
 }

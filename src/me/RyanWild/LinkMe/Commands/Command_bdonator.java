@@ -17,12 +17,13 @@ public class Command_bdonator extends BukkitCommand
     {
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String donatordesc = Linkme.config.getString("Donator.info.url");
+    String donatordesc = Linkme.config.getString("Donator.info.description");
     String donatordesc1 = LinkMe_Utils.replaceColors(donatordesc);
-    String donatorenab = Linkme.config.getString("Donator.info.enabled");
-         if (donatorenab.equalsIgnoreCase("true")){
-
-            Bukkit.broadcastMessage(announcer1 + ": " + donatordesc1);   
+    String donatorurl = Linkme.config.getString("Donator.info.url");
+    String donatorurl1 = LinkMe_Utils.replaceColors(donatorurl);
+    String Status = Linkme.config.getString("Donator.info.enabled");
+         if (Status.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(announcer1 + ": " + donatordesc1 + " " + donatorurl1);   
         } else {
             Player player = (Player) commandSender;
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");

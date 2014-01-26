@@ -8,6 +8,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.bforum")
 public class Command_bforum extends BukkitCommand
 {
@@ -16,11 +17,17 @@ public class Command_bforum extends BukkitCommand
     {
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String forumtext = Linkme.config.getString("forumtext");
-    String forumtext1 = LinkMe_Utils.replaceColors(forumtext);
-    String forum = Linkme.config.getString("forum");
-    String forum1 = LinkMe_Utils.replaceColors(forum);
-    Bukkit.broadcastMessage(announcer1 + ": " + forumtext1 + " "+ forum1);
+    String forumdesc = Linkme.config.getString("Forums.info.description");
+    String forumdesc1 = LinkMe_Utils.replaceColors(forumdesc);
+    String forumurl = Linkme.config.getString("Forums.info.url");
+    String forumurl1 = LinkMe_Utils.replaceColors(forumurl);
+    String Status = Linkme.config.getString("Forums.info.enabled");
+         if (Status.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(announcer1 + ": " + forumdesc1 + " "+ forumurl1);
+        } else {
+            Player player = (Player) commandSender;
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
         return false;
     }
 }

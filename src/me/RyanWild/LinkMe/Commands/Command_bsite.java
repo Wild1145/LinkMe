@@ -8,6 +8,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 @CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.bsite")
 public class Command_bsite extends BukkitCommand
 {
@@ -16,11 +17,17 @@ public class Command_bsite extends BukkitCommand
     {
     String announcer = Linkme.config.getString("announcer");
     String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String sitetext = Linkme.config.getString("sitetext");
-    String sitetext1 = LinkMe_Utils.replaceColors(sitetext);
-    String site = Linkme.config.getString("site");
-    String site1 = LinkMe_Utils.replaceColors(site);
-    Bukkit.broadcastMessage(announcer1 + ": " + sitetext1 + " "+ site1);
+    String sitedesc = Linkme.config.getString("Website.info.description");
+    String sitedesc1 = LinkMe_Utils.replaceColors(sitedesc);
+    String siteurl = Linkme.config.getString("Website.info.url");
+    String siteurl1 = LinkMe_Utils.replaceColors(siteurl);
+    String Status = Linkme.config.getString("Website.info.enabled");
+         if (Status.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(announcer1 + ": " + sitedesc1 + " "+ siteurl1);
+        } else {
+            Player player = (Player) commandSender;
+            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            }
         return false;
     }
 }
