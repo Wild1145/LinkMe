@@ -31,6 +31,7 @@ public static String TwitterStatus = Linkme.config.getString("Twitter.info.enabl
 public static String VentriloStatus = Linkme.config.getString("Ventrillo.info.enabled");   
 public static String Ventdescription = Linkme.config.getString("Ventrillo.info.descriptionription");
 public static String Ventip = Linkme.config.getString("Ventrillo.info.url");
+public static String Voicelist = Linkme.config.getString("Voicelist.info.description");
 public static String Votedescription = Linkme.config.getString("Voting.info.descriptionription");
 public static String Voteurl = Linkme.config.getString("vote");
 public static String VoteStatus = Linkme.config.getString("Voting.info.enabled");

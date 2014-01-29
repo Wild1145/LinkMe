@@ -1,7 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
 import me.RyanWild.LinkMe.LinkMe_Utils;
-import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
 import net.pravian.bukkitlib.command.SourceType;
@@ -15,40 +14,22 @@ public class Command_bvoice extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-        String announcer = Linkme.config.getString("announcer");
-        String announcer1 = LinkMe_Utils.replaceColors(announcer);
-        String voiceserverlist = Linkme.config.getString("Voicelist.info.description");
-        String voiceserverlist1 = LinkMe_Utils.replaceColors(voiceserverlist);
-        String Mumbledesc = Linkme.config.getString("Mumble.info.description");
-        String Mumbledesc1 = LinkMe_Utils.replaceColors(Mumbledesc);
-        String Mumbleip = Linkme.config.getString("Mumble.info.url");
-        String Mumbleip1 = LinkMe_Utils.replaceColors(Mumbleip);
-        String MumbleStatus = Linkme.config.getString("Mumble.info.enabled");
-        String Ventrillodesc = Linkme.config.getString("Ventrillo.info.description");
-        String Ventrillodesc1 = LinkMe_Utils.replaceColors(Ventrillodesc);
-        String Ventrilloip = Linkme.config.getString("Ventrillo.info.url");
-        String Ventrilloip1 = LinkMe_Utils.replaceColors(Ventrilloip);
-        String VentStatus = Linkme.config.getString("Ventrillo.info.enabled");
-        String ts3desc = Linkme.config.getString("Teamspeak3.info.description");
-        String ts3desc1 = LinkMe_Utils.replaceColors(ts3desc);
-        String ts3ip = Linkme.config.getString("Teamspeak3.info.url");
-        String ts3ip1 = LinkMe_Utils.replaceColors(ts3ip);
-        String ts3Status = Linkme.config.getString("Teamspeak3.info.enabled"); 
+
         Player player = (Player) commandSender;
 
-        Bukkit.broadcastMessage(announcer1 + ": " + voiceserverlist1);
-         if (MumbleStatus.equalsIgnoreCase("true")){
-            Bukkit.broadcastMessage(announcer1 + ": " + Mumbledesc1 + " "+ Mumbleip1);
+        Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + (LinkMe_Utils.replaceColors(Strings.Voicelist)));
+         if (Strings.MumbleStatus.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbledescription) + " "+ LinkMe_Utils.replaceColors(Strings.Mumbleip));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
-         if (VentStatus.equalsIgnoreCase("true")){
-            Bukkit.broadcastMessage(announcer1 + ": " + Ventrillodesc1 + " "+ Ventrilloip1);
+         if (Strings.VentriloStatus.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Ventdescription) + " "+ LinkMe_Utils.replaceColors(Strings.Ventip));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
-         if (ts3Status.equalsIgnoreCase("true")){
-            Bukkit.broadcastMessage(announcer1 + ": " + ts3desc1 + " "+ ts3ip1);
+         if (Strings.TS3Status.equalsIgnoreCase("true")){
+            Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.TS33description) + " "+ LinkMe_Utils.replaceColors(Strings.TS3ip));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }

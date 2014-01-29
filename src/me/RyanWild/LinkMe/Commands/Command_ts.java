@@ -1,7 +1,6 @@
 package me.RyanWild.LinkMe.Commands;
 
 import me.RyanWild.LinkMe.LinkMe_Utils;
-import me.RyanWild.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
 import net.pravian.bukkitlib.command.SourceType;
@@ -14,16 +13,9 @@ public class Command_ts extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-    String announcer = Linkme.config.getString("announcer");
-    String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String ts3desc = Linkme.config.getString("Teamspeak3.info.description");
-    String ts3desc1 = LinkMe_Utils.replaceColors(ts3desc);
-    String ts3ip = Linkme.config.getString("Teamspeak3.info.url");
-    String ts3ip1 = LinkMe_Utils.replaceColors(ts3ip);
-    String Status = Linkme.config.getString("Teamspeak3.info.enabled");
     Player player = (Player) commandSender;
-         if (Status.equalsIgnoreCase("true")){
-            player.sendMessage(announcer1 + ": " + ts3desc1 + " "+ ts3ip1);
+         if (Strings.TS3Status.equalsIgnoreCase("true")){
+            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.TS33description) + " "+ LinkMe_Utils.replaceColors(Strings.TS3ip));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
