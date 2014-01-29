@@ -25,11 +25,6 @@ class SignListener implements Listener {
         String line2 = event.getLine(1);
     if (line1.equalsIgnoreCase("[LM]"))  {
 
-        if (line2.equalsIgnoreCase("facebook")){
-        Player player = event.getPlayer();
-        event.setLine(0, ChatColor.AQUA + line1);
-        player.sendMessage(ChatColor.GOLD + "New Sign Created");
-        }
         
         if (line2.equalsIgnoreCase("donator")){
         Player player = event.getPlayer();
@@ -37,9 +32,71 @@ class SignListener implements Listener {
         player.sendMessage(ChatColor.GOLD + "New Sign Created");
         }
         
-    
+        if (line2.equalsIgnoreCase("facebook")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
         
+        if (line2.equalsIgnoreCase("mumble")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
+       
+        if (line2.equalsIgnoreCase("rankup")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
+
+        if (line2.equalsIgnoreCase("site")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
         
+        if (line2.equalsIgnoreCase("ts3")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
+        
+        if (line2.equalsIgnoreCase("twitch")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
+        
+        if (line2.equalsIgnoreCase("twitter")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
+        
+        if (line2.equalsIgnoreCase("ventrilo")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
+        
+        if (line2.equalsIgnoreCase("voice")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
+        
+        if (line2.equalsIgnoreCase("vote")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
+        
+        if (line2.equalsIgnoreCase("youtube")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        } 
     }                 
   } 
     
