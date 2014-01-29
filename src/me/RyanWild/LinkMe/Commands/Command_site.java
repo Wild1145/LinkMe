@@ -14,16 +14,9 @@ public class Command_site extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
     {
-    String announcer = Linkme.config.getString("announcer");
-    String announcer1 = LinkMe_Utils.replaceColors(announcer);
-    String sitedesc = Linkme.config.getString("Website.info.description");
-    String sitedesc1 = LinkMe_Utils.replaceColors(sitedesc);
-    String siteurl = Linkme.config.getString("Website.info.url");
-    String siteurl1 = LinkMe_Utils.replaceColors(siteurl);
-    String Status = Linkme.config.getString("Website.info.enabled");
     Player player = (Player) commandSender;
-         if (Status.equalsIgnoreCase("true")){
-            player.sendMessage(announcer1 + ": " + sitedesc1 + " "+ siteurl1);
+         if (Strings.WebsiteStatus.equalsIgnoreCase("true")){
+            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Websitedescription) + " "+ LinkMe_Utils.replaceColors(Strings.Websiteurl));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
