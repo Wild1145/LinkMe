@@ -11,48 +11,40 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.mcstats.Metrics;
-
 public class Linkme extends JavaPlugin
 {
-
     public static final Logger logger = Bukkit.getLogger();
-    
     public static BukkitCommandHandler handler;
-    
     public static YamlConfig config;
-
     public static Linkme plugin;
-
     public static final String MSG_NO_PERMS = ChatColor.RED + "You do not have permission to use this command.";
-
     @Override
     public void onDisable()
     {
         Bukkit.broadcastMessage(Linkme.config.getString("announcer") + ": LinkMe by Kyled1986 & Wild1145 has been Disabled! ");
         Linkme.logger.info("LinkMe Disabled");
     }
-
     @Override
     public void onEnable()
     {
         plugin = this;
-        
         handler = new BukkitCommandHandler(plugin);
         handler.setCommandLocation(Command_site.class.getPackage());
         handler.setPermissionMessage(MSG_NO_PERMS);
-        
         config = new YamlConfig(plugin,"config.yml",true);
         config.load();
         PluginDescriptionFile pdfFile = this.getDescription();
+/*** @author Kyle*/
+        PluginManager pm = this.getServer().getPluginManager();
+        pm.registerEvents(new MyPlayerListener(this), this);
+        pm.registerEvents(new SignListener(this), this);
+/*** @author Kyle*/
         Linkme.logger.log(Level.INFO, "{0} Version{1} Has Been Enabled", new Object[]{pdfFile.getName(), pdfFile.getVersion()});
-        
-
-
         Linkme.config.options().copyDefaults(true);
         saveConfig();
-
         try
         {
             Metrics metrics = new Metrics(this);
