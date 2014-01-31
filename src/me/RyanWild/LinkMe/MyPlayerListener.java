@@ -37,7 +37,7 @@ String ATS3ip = LinkMe_Utils.replaceColors(Linkme.config.getString("Teamspeak3.i
 String ATwitchdescription = LinkMe_Utils.replaceColors(Linkme.config.getString("Twitch.info.descriptionription"));
 String ATwitchurl = LinkMe_Utils.replaceColors(Linkme.config.getString("Twitch.info.url"));
 String ATwitterdescription = LinkMe_Utils.replaceColors(Linkme.config.getString("Twitter.info.descriptionription"));
-String ATwitterurl = LinkMe_Utils.replaceColors(Linkme.config.getString("Twitter.info.url"));
+String ATwitterurl = LinkMe_Utils.replaceColors(Linkme.config.getString("Twitter.info.url")); 
 String AVentdescription = LinkMe_Utils.replaceColors(Linkme.config.getString("Ventrillo.info.descriptionription"));
 String AVentip = LinkMe_Utils.replaceColors(Linkme.config.getString("Ventrillo.info.url"));
 String AVoicelist = LinkMe_Utils.replaceColors(Linkme.config.getString("Voicelist.info.description"));
@@ -54,7 +54,7 @@ String AYoutubeurl = LinkMe_Utils.replaceColors(Linkme.config.getString("Youtube
     @EventHandler
     public void interact(PlayerInteractEvent event) {
 
-                
+               /*** TEST CODE DO NOT USE */ 
         if ((event.getPlayer() !=null) && (event.getAction() !=null) && (event.getClickedBlock() !=null)) {
                Player player = event.getPlayer();
                Action action = event.getAction();
@@ -87,13 +87,6 @@ String AYoutubeurl = LinkMe_Utils.replaceColors(Linkme.config.getString("Youtube
                                  player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
                               }
-                              else if(line1.contains("[LM]")&& line2.equalsIgnoreCase("forums")) {
-                              if (Strings.MumbleStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  AMumbledescription+ " " + AMumbleip);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }
-                              }
                               else if(line1.contains("[LM]")&& line2.equalsIgnoreCase("rankup")) {
                               if (Strings.RankupStatus.equalsIgnoreCase("true")){
                                 player.sendMessage(Announcer + "|| " +  ARankdescription);
@@ -107,70 +100,40 @@ String AYoutubeurl = LinkMe_Utils.replaceColors(Linkme.config.getString("Youtube
                                } else {
                                  player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
-                              }
-                               else if(line1.contains("[LM]")&& line2.equalsIgnoreCase("ts3")) {
-                              if (Strings.TS3Status.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  ATS33description + " " + ATS3ip);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }
+                              }        
                               
-                              } 
-                               else if(line1.contains("[LM]")&& line2.equalsIgnoreCase("twitch")) {
-                              if (Strings.WebsiteStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  ATwitchdescription + " " + ATwitchurl);
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+/*** TEST CODE DO NOT USE
+                       if(line1.contains("[LM]")&& line2.contains("facebook")) {
+                              if (Strings.FacebookStatus.equalsIgnoreCase("true")){
+                                player.sendMessage(Announcer + "|| " +  afacebookdesc + " " +afacebookurl);
                                } else {
                                  player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }
-                              }             
-                               else if(line1.contains("[LM]")&& line2.equalsIgnoreCase("twitter")) {
-                              if (Strings.WebsiteStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  ATwitterdescription + " " + ATwitterurl);
+            } 
+                       if(line1.contains("[LM]")&& line2.contains("forum")) {
+                              if (Strings.ForumStatus.equalsIgnoreCase("true")){
+                                player.sendMessage(Announcer + "|| " +  aforumdesc + " " +aforumurl);
                                } else {
                                  player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }
-                              }
-                              else if(line1.contains("[LM]")&& line2.equalsIgnoreCase("vent")) {
-                              if (Strings.VentriloStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  AVentdescription + " " + AVentip);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }
-                              }
-                               else if(line1.contains("[LM]")&& line2.equalsIgnoreCase("voice")) {
-                                player.sendMessage(Announcer + "|| " +  AVoicelist + " " + ATwitterurl);
-                              if (Strings.MumbleStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  AMumbledescription+ " " + AMumbleip);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }
-                              if (Strings.TS3Status.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  ATS33description + " " + ATS3ip);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }
-                              if (Strings.VentriloStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  AVentdescription + " " + AVentip);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                              }                              
-            }
-                               else if(line1.contains("[LM]")&& line2.equalsIgnoreCase("vote")) {
-                              if (Strings.VoteStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  AVotedescription + " " + AVoteurl);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }
-                              }                   
-                               else if(line1.contains("[LM]")&& line2.equalsIgnoreCase("youtube")) {
-                              if (Strings.YoutubeStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  AVotedescription + " " + AVoteurl);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }
-                              }    
+            }        
+
+                       
+                       
+                   }return;
+               }return;
+ 
+ */
                    }
                }
         }
     }
+    }
 }
+
