@@ -53,8 +53,7 @@ String AYoutubeurl = LinkMe_Utils.replaceColors(Linkme.config.getString("Youtube
     
     @EventHandler
     public void interact(PlayerInteractEvent event) {
-
-               /*** TEST CODE DO NOT USE */ 
+/*** TEST CODE DO NOT USE
         if ((event.getPlayer() !=null) && (event.getAction() !=null) && (event.getClickedBlock() !=null)) {
                Player player = event.getPlayer();
                Action action = event.getAction();
@@ -103,37 +102,9 @@ String AYoutubeurl = LinkMe_Utils.replaceColors(Linkme.config.getString("Youtube
                               }        
                               
                               
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-/*** TEST CODE DO NOT USE
-                       if(line1.contains("[LM]")&& line2.contains("facebook")) {
-                              if (Strings.FacebookStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  afacebookdesc + " " +afacebookurl);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            } 
-                       if(line1.contains("[LM]")&& line2.contains("forum")) {
-                              if (Strings.ForumStatus.equalsIgnoreCase("true")){
-                                player.sendMessage(Announcer + "|| " +  aforumdesc + " " +aforumurl);
-                               } else {
-                                 player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-            }        
 
-                       
-                       
-                   }return;
-               }return;
+
  
  */
                    }
                }
-        }
-    }
-    }
-}
-
