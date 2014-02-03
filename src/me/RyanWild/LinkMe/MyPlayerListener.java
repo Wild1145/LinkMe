@@ -18,7 +18,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  *
- * @author Kyle
+ * @author Kyle - THIS IS A TEST TO MAKE SURE JENKINS BUILDS ON CHANGES
  */
 class MyPlayerListener extends JavaPlugin implements Listener {
     
