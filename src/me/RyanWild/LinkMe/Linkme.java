@@ -63,7 +63,6 @@ public class Linkme extends JavaPlugin
     {
         // This will handle ALL commands from now on DONT TOUCH!!!
         return handler.handleCommand(sender, cmd, commandLabel, args);
-        
     }
 
 }
