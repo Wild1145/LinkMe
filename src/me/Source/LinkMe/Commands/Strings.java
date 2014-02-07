@@ -1,7 +1,7 @@
 
-package me.RyanWild.LinkMe.Commands;
+package me.Source.LinkMe.Commands;
 
-import me.RyanWild.LinkMe.Linkme;
+import me.Source.LinkMe.Linkme;
 
 public class Strings {
 public static String Announcer = Linkme.config.getString("announcer");

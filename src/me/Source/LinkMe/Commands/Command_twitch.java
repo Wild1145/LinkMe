@@ -1,7 +1,7 @@
-package me.RyanWild.LinkMe.Commands;
+package me.Source.LinkMe.Commands;
 
-import me.RyanWild.LinkMe.LinkMe_Utils;
-import me.RyanWild.LinkMe.Linkme;
+import me.Source.LinkMe.LinkMe_Utils;
+import me.Source.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
 import net.pravian.bukkitlib.command.SourceType;
