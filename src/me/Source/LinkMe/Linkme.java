@@ -1,5 +1,11 @@
 package me.Source.LinkMe;
 
+/**
+ * #TO ANYONE VIEWING THIS WITH A DECOMPILER#
+ * If you are such a massive douche to try decompile the source for this project 
+ * You really should go take some java lessons and learn how to do it, instead of
+ * trying to rip of other peoples hard work, oh and don't try to submit it to Bukkit.
+ */
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
