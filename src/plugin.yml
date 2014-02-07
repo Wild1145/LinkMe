@@ -1,7 +1,6 @@
-name: LinkMe
+name: Link-Me
 main: me.RyanWild.LinkMe.Linkme
-dev-url: http://dev.bukkit.org/bukkit-plugins/linkme/
-version: 2.4
+version: 2.5
 description: Link Me
 
 commands:
