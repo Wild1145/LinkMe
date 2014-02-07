@@ -53,7 +53,6 @@ String AYoutubeurl = LinkMe_Utils.replaceColors(Strings.Youtubeurl);
     @EventHandler
     public void interact(PlayerInteractEvent event) {
         
-
         if ((event.getPlayer() !=null) && (event.getAction() !=null) && (event.getClickedBlock() !=null)) {
                Player player = event.getPlayer();
                Action action = event.getAction();
