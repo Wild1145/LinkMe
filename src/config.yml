@@ -58,7 +58,7 @@ Ventrillo:
         description: 'Come visit our Ventrillo server at'
         ip: '127.0.0.1:9999'
 # VoiceList
-Voicelist:
+VoiceList:
     info:
         description: 'This is a list of our Voice Servers'
 # Voting
