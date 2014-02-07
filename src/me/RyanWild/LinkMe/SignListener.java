@@ -38,6 +38,12 @@ class SignListener implements Listener {
         player.sendMessage(ChatColor.GOLD + "New Sign Created");
         }
         
+        if (line2.equalsIgnoreCase("forum")){
+        Player player = event.getPlayer();
+        event.setLine(0, ChatColor.AQUA + line1);
+        player.sendMessage(ChatColor.GOLD + "New Sign Created");
+        }
+        
         if (line2.equalsIgnoreCase("mumble")){
         Player player = event.getPlayer();
         event.setLine(0, ChatColor.AQUA + line1);
@@ -56,7 +62,7 @@ class SignListener implements Listener {
         player.sendMessage(ChatColor.GOLD + "New Sign Created");
         }
         
-        if (line2.equalsIgnoreCase("ts3")){
+        if (line2.equalsIgnoreCase("ts")){
         Player player = event.getPlayer();
         event.setLine(0, ChatColor.AQUA + line1);
         player.sendMessage(ChatColor.GOLD + "New Sign Created");
@@ -74,7 +80,7 @@ class SignListener implements Listener {
         player.sendMessage(ChatColor.GOLD + "New Sign Created");
         }
         
-        if (line2.equalsIgnoreCase("ventrilo")){
+        if (line2.equalsIgnoreCase("vent")){
         Player player = event.getPlayer();
         event.setLine(0, ChatColor.AQUA + line1);
         player.sendMessage(ChatColor.GOLD + "New Sign Created");
