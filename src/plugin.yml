@@ -42,9 +42,9 @@ commands:
     description: Broadcasts all voice servers
   lmreload:
     description: Reloads LinkMe
-  vote:
+  vl:
     description: Displays Voting information and URL
-  bvote:
+  bvl:
     description: Broadcasts the Vote information
   rankup:
     description: Displays all the information about how to rank up and includes a link

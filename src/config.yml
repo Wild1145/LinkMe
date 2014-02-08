@@ -3,26 +3,47 @@
 #########################
 
 
+# If you would like a list of the comptabile colour codes please visit 
+# http://minecraft.gamepedia.com/Formatting_codes#Color_codes
+
+
+###################
+# GLOBAL SETTINGS #
+###################
+
+## Change the name of the announcer here this is global and will show in every command
 announcer: '[LinkMe]'
-# Donator
+
+
+## NOTES ##
+
+## enabled - This value can either be true or false to enable or disable a feature
+## description - this is the text that you can put in front of each command to inform players
+## url / ip - The actual URL / IP of the media source.
+
+
+#Donator settings go here
 Donator: 
     info:
         enabled: true
         description: 'Go have a look and check out our donation page at and remember every donation keeps the server running.'
         url: 'http://www.google.com'
-# Facebook
+        
+# Facebook settings go here
 Facebook:
     info:
         enabled: true
         description: 'Come visit our Ventrillo server at'
         url: 'http://www.google.com'
-# Forum
+        
+# Forum settings go here
 Forums:
     info:
         enabled: true
         description: 'Come visit our Forums at'
         url: 'http://www.google.com'
-# Mumble
+        
+# Mumble settings go here
 Mumble:
     info:
         enabled: true
@@ -32,14 +53,16 @@ Mumble:
 RankingUp:
     info:
         enabled: true
-        description: 'Rank up information here' 
-# Teamspeak 3
+        description: 'Rank up information here'
+        
+# Teamspeak 3 settings go here
 Teamspeak3:
     info:
         enabled: true
         description: 'Come visit our Teamspeak 3 server at'
         ip: 'http://www.google.com'
-# Twitch 
+        
+# Twitch settings go here
 Twitch:
     info:
         enabled: true
@@ -51,31 +74,38 @@ Twitter:
         enabled: true
         description: 'Come visit our Ventrillo server at'
         url: 'http://www.google.com'
-# Ventrillo
+        
+# Ventrillo settings go here
 Ventrillo:
     info:
         enabled: true
         description: 'Come visit our Ventrillo server at'
         ip: '127.0.0.1:9999'
-# VoiceList
+        
+# VoiceList settings go here
 VoiceList:
     info:
-        description: 'This is a list of our Voice Servers'
-# Voting
+        description: 'here is a list of our Voice Servers'
+        
+# Voting settings go here
 Voting:
     info:
         enabled: true
         description: 'Come visit our Ventrillo server at'
         url: 'http://www.google.com'
-# Website
+        
+# Website settings go here
 Website:
     info:
         enabled: true
         description: 'Come visit our Website at'
         url: 'http://www.google.com'
+        
+# Youtube settings go here     
 Youtube:
     info:
         enabled: true
         description: 'You can find out Youtube page at'
         url: 'http://www.youtube.com'
+
 # END OF CONFIG
