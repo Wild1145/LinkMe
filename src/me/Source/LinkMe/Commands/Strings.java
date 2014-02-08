@@ -2,8 +2,10 @@
 package me.Source.LinkMe.Commands;
 
 import me.Source.LinkMe.Linkme;
+import org.bukkit.ChatColor;
 
 public class Strings {
+public static final String MSG_NO_PERMS = ChatColor.RED + "You do not have permission to use this command.";
 public static String Announcer = Linkme.config.getString("announcer");
 public static String Donatordescription = Linkme.config.getString("Donator.info.description");
 public static String Donatorurl = Linkme.config.getString("Donator.info.url");
