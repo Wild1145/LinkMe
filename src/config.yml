@@ -88,12 +88,47 @@ VoiceList:
         description: 'here is a list of our Voice Servers'
         
 # Voting settings go here
-Voting:
-    info:
+Vote:
+    VoteLink01:
         enabled: true
         description: 'Come visit our Ventrillo server at'
         url: 'http://www.google.com'
-        
+    VoteLink02:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
+    VoteLink03:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
+    VoteLink04:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
+    VoteLink05:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
+    VoteLink06:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
+    VoteLink07:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
+    VoteLink08:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
+    VoteLink09:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
+    VoteLink10:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
 # Website settings go here
 Website:
     info:
