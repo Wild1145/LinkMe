@@ -8,8 +8,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "blinkme.bvote")
-public class Command_bvote extends BukkitCommand
+@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "blinkme.bvl")
+public class Command_bvl extends BukkitCommand
 {
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
