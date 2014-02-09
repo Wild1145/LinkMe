@@ -85,8 +85,7 @@ Ventrillo:
 # VoiceList settings go here
 VoiceList:
     info:
-        description: 'here is a list of our Voice Servers'
-        
+        description: 'here is a list of our Voice Servers'   
 # Voting settings go here
 Vote:
     VoteLink01:
