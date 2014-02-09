@@ -1,5 +1,5 @@
 name: Link-Me
-main: me.RyanWild.LinkMe.Linkme
+main: me.Source.LinkMe.Linkme
 version: 2.5
 description: Link Me
 
@@ -42,10 +42,26 @@ commands:
     description: Broadcasts all voice servers
   lmreload:
     description: Reloads LinkMe
-  vl:
+  vl1:
     description: Displays Voting information and URL
-  bvl:
-    description: Broadcasts the Vote information
+  vl2:
+    description: Displays Voting information and URL
+  vl3:
+    description: Displays Voting information and URL
+  vl4:
+    description: Displays Voting information and URL
+  vl5:
+    description: Displays Voting information and URL
+  vl6:
+    description: Displays Voting information and URL
+  vl7:
+    description: Displays Voting information and URL
+  vl8:
+    description: Displays Voting information and URL
+  vl9:
+    description: Displays Voting information and URL
+  vl10:
+    description: Displays Voting information and URL
   rankup:
     description: Displays all the information about how to rank up and includes a link
   brankup:
