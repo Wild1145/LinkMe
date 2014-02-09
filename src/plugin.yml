@@ -1,6 +1,6 @@
 name: Link-Me
 main: me.Source.LinkMe.Linkme
-version: 2.5
+version: 2.6
 description: Link Me
 
 commands:
