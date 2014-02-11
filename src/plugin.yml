@@ -66,3 +66,9 @@ commands:
     description: Displays all the information about how to rank up and includes a link
   brankup:
     description: Broadcasts all the information about how to rank up and includes a link
+  staffrank1:
+    description: Broadcasts all the information about how to rank up and includes a link
+  staffrank2:
+    description: Broadcasts all the information about how to rank up and includes a link
+  staffrank3:
+    description: Broadcasts all the information about how to rank up and includes a link

@@ -21,6 +21,9 @@ announcer: '[LinkMe]'
 ## description - this is the text that you can put in front of each command to inform players
 ## url / ip - The actual URL / IP of the media source.
 
+###########################
+# COMMAND & SIGN SETTINGS #
+###########################
 
 #Donator settings go here
 Donator: 
@@ -49,6 +52,7 @@ Mumble:
         enabled: true
         description: 'Come visit our Mumble server at'
         ip: '127.0.0.1:9999'
+
 # Ranking Up
 RankingUp:
     info:
@@ -68,6 +72,7 @@ Twitch:
         enabled: true
         description: 'Come visit our Ventrillo server at'
         url: 'http://www.google.com'
+
 # Twitter
 Twitter:
     info:
@@ -86,6 +91,7 @@ Ventrillo:
 VoiceList:
     info:
         description: 'here is a list of our Voice Servers'   
+
 # Voting settings go here
 Vote:
     VoteLink01:
@@ -128,6 +134,7 @@ Vote:
         enabled: true
         description: 'Come visit our Ventrillo server at'
         url: 'http://www.google.com'
+
 # Website settings go here
 Website:
     info:
@@ -141,5 +148,30 @@ Youtube:
         enabled: true
         description: 'You can find out Youtube page at'
         url: 'http://www.youtube.com'
+
+
+#####################
+# STAFF INFORMATION #
+#####################
+
+Staff-Ranks:
+    Info1:
+        enabled: true
+        title: Owner
+        name: Usernamehere
+        facebook: http://www.facebook.com/NameHere
+        twitter: @hubert
+    Info2:
+        enabled: true
+        title: Owner
+        name: Usernamehere
+        facebook: http://www.facebook.com/NameHere
+        twitter: @hubert
+    Info3:
+        enabled: true
+        title: Owner
+        facebook: http://www.facebook.com/NameHere
+        name: Usernamehere
+        twitter: @hubert
 
 # END OF CONFIG
