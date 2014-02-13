@@ -13,6 +13,9 @@ class SignListener implements Listener {
     public void Sign(SignChangeEvent event) {
         String line1 = event.getLine(0);
         String line2 = event.getLine(1);
+        Player player1 = event.getPlayer();
+               
+   if (player1.hasPermission("linkme.sign.place")) {
     if (line1.equalsIgnoreCase("[LM]"))  {
         if (line2.equalsIgnoreCase("donator")){
         Player player = event.getPlayer();
@@ -69,6 +72,9 @@ class SignListener implements Listener {
         event.setLine(0, ChatColor.AQUA + line1);
         player.sendMessage(ChatColor.GOLD + "New Sign Created");
         } 
+} else { 
+    player1.sendMessage("You do not have permission to use this!");
+}  
     }                 
   } 
 }

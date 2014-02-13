@@ -157,21 +157,21 @@ Youtube:
 Staff-Ranks:
     Info1:
         enabled: true
-        title: Owner
-        name: Usernamehere
-        facebook: http://www.facebook.com/NameHere
-        twitter: @hubert
+        title: 'Owner'
+        name: 'Usernamehere'
+        facebook: 'http://www.facebook.com/NameHere'
+        twitter: '@hubert'
     Info2:
         enabled: true
-        title: Owner
-        name: Usernamehere
-        facebook: http://www.facebook.com/NameHere
-        twitter: @hubert
+        title: 'Owner'
+        name: 'Usernamehere'
+        facebook: 'http://www.facebook.com/NameHere'
+        twitter: '@hubert'
     Info3:
         enabled: true
-        title: Owner
-        facebook: http://www.facebook.com/NameHere
-        name: Usernamehere
-        twitter: @hubert
+        title: 'Owner'
+        facebook: 'http://www.facebook.com/NameHere'
+        name: 'Usernamehere'
+        twitter: '@hubert'
 
 # END OF CONFIG

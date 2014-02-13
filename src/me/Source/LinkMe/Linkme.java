@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import me.Source.LinkMe.Commands.Command_site;
-import static me.Source.LinkMe.Commands.Strings.MSG_NO_PERMS;
 import net.pravian.bukkitlib.command.BukkitCommandHandler;
 import net.pravian.bukkitlib.config.YamlConfig;
 import org.bukkit.Bukkit;
@@ -41,7 +40,7 @@ public class Linkme extends JavaPlugin
     plugin = this;
     handler = new BukkitCommandHandler(plugin);
     handler.setCommandLocation(Command_site.class.getPackage());
-    handler.setPermissionMessage(MSG_NO_PERMS);
+    /** handler.setPermissionMessage(MSG_NO_PERMS); */
     config = new YamlConfig(plugin, "config.yml", true);
     config.load();
     PluginDescriptionFile pdfFile = getDescription();
