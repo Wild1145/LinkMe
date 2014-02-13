@@ -49,6 +49,8 @@ String AWebsiteurl = LinkMe_Utils.replaceColors(Strings.Websiteurl);
                        Sign sign = (Sign)event.getClickedBlock().getState();
                        String line1 = sign.getLine(0);
                        String line2 = sign.getLine(1);
+
+                     if (player.hasPermission("linkme.sign.use"))  {
                        if(line1.contains("[LM]")&& line2.equalsIgnoreCase("donator")) {
                          if (Strings.Donatorstatus.equalsIgnoreCase("true")) {
                          player.sendMessage(Announcer + "|| " +  adonatordesc + " " + adonatorurl);
@@ -119,6 +121,10 @@ String AWebsiteurl = LinkMe_Utils.replaceColors(Strings.Websiteurl);
                          player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
                          }
                        }
+                       } else {
+                           player.sendMessage(Strings.MSG_NO_PERMS);
+                       }
+                       
                    }
                }
                }
