@@ -12,9 +12,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 class MyPlayerListener extends JavaPlugin implements Listener {
 String Announcer = Linkme.config.getString("announcer");
-String adonatordesc = LinkMe_Utils.replaceColors(Strings.Donatordescription);
-String afacebookdesc = LinkMe_Utils.replaceColors(Strings.Facebookdescription);
-String aforumdesc = LinkMe_Utils.replaceColors(Strings.Forumdescription);
+String Adonatordesc = LinkMe_Utils.replaceColors(Strings.Donatordescription);
+String Afacebookdesc = LinkMe_Utils.replaceColors(Strings.Facebookdescription);
+String Aforumdesc = LinkMe_Utils.replaceColors(Strings.Forumdescription);
 String AMumbledescription = LinkMe_Utils.replaceColors(Strings.Mumbledescription);
 String ARankdescription = LinkMe_Utils.replaceColors(Strings.Rankdescription);
 String ATS33description = LinkMe_Utils.replaceColors(Strings.TS33description);
@@ -46,25 +46,25 @@ String AWebsiteurl = LinkMe_Utils.replaceColors(Strings.Websiteurl);
                    if (block == Material.SIGN_POST || block == Material.WALL_SIGN) {
                        Sign sign = (Sign)event.getClickedBlock().getState();
                        String line1 = sign.getLine(0);
-                       String line2 = sign.getLine(1);
+                       String line2 = sign.getLine(1);                      
               if (player.hasPermission("linkme.sign.use")) {
                        if(line1.contains("[LM]")&& line2.equalsIgnoreCase("donator")) {
                          if (Strings.Donatorstatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  adonatordesc + " " + adonatorurl);
+                         player.sendMessage(Announcer + "|| " +  Adonatordesc + " " + adonatorurl);
                          } else {
                          player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
                          }
                        }
                        if(line1.contains("[LM]")&& line2.equalsIgnoreCase("facebook")) {
                          if (Strings.FacebookStatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  afacebookdesc + " " + afacebookurl);
+                         player.sendMessage(Announcer + "|| " +  Afacebookdesc + " " + afacebookurl);
                          } else {
                          player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
                          
                        }
                        if(line1.contains("[LM]")&& line2.equalsIgnoreCase("forum")) {
                          if (Strings.ForumStatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  aforumdesc + " " + aforumurl);
+                         player.sendMessage(Announcer + "|| " +  Aforumdesc + " " + aforumurl);
                          } else {
                          player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
                          }
