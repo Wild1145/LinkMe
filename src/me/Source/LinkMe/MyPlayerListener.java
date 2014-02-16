@@ -8,9 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.plugin.java.JavaPlugin;
 
-class MyPlayerListener extends JavaPlugin implements Listener {
+class MyPlayerListener implements Listener {
 String Announcer = Linkme.config.getString("announcer");
 String Adonatordesc = LinkMe_Utils.replaceColors(Strings.Donatordescription);
 String Afacebookdesc = LinkMe_Utils.replaceColors(Strings.Facebookdescription);
@@ -34,8 +33,10 @@ String AVentip = LinkMe_Utils.replaceColors(Strings.Ventip);
 String AVoicelist = LinkMe_Utils.replaceColors(Strings.Voicelist);
 String AYoutubeurl = LinkMe_Utils.replaceColors(Strings.Youtubeurl);
 String AWebsiteurl = LinkMe_Utils.replaceColors(Strings.Websiteurl);
-    public MyPlayerListener(Linkme aThis) {
+
+    MyPlayerListener(Linkme aThis) {
     }
+
     @EventHandler
     public void interact(PlayerInteractEvent event) {
         if ((event.getPlayer() !=null) && (event.getAction() !=null) && (event.getClickedBlock() !=null)) {
