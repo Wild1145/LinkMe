@@ -16,7 +16,7 @@ public class Command_mum extends BukkitCommand
 
     Player player = (Player) commandSender;
          if (Strings.MumbleStatus.equalsIgnoreCase("true")){
-            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbledescription) + " "+ LinkMe_Utils.replaceColors(Strings.Mumbleip));
+            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbledescription) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbleip));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }

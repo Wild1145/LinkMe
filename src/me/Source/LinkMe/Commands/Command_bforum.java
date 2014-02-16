@@ -16,7 +16,7 @@ public class Command_bforum extends BukkitCommand
     {
     Player player = (Player) commandSender;
          if (Strings.ForumStatus.equalsIgnoreCase("true")){
-            Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Forumdescription) + " "+ LinkMe_Utils.replaceColors(Strings.Forumurl));
+            Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Forumdescription)+ ": " + LinkMe_Utils.replaceColors(Strings.Forumurl));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }

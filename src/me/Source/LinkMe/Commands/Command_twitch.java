@@ -15,7 +15,7 @@ public class Command_twitch extends BukkitCommand
     {
     Player player = (Player) commandSender;
          if (Strings.TwitchStatus.equalsIgnoreCase("true")){
-            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Twitchdescription) + " "+ LinkMe_Utils.replaceColors(Strings.Twitchurl));
+            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Twitchdescription) + ": " + LinkMe_Utils.replaceColors(Strings.Twitchurl));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }

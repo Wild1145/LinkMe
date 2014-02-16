@@ -15,7 +15,7 @@ public class Command_youtube extends BukkitCommand
     {
     Player player = (Player) commandSender;
          if (Strings.YoutubeStatus.equalsIgnoreCase("true")){
-            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Youtubedescription) + " "+ LinkMe_Utils.replaceColors(Strings.Youtubeurl));
+            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Youtubedescription) + ": " + LinkMe_Utils.replaceColors(Strings.Youtubeurl));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }

@@ -15,7 +15,7 @@ public class Command_twitter extends BukkitCommand
     {
     Player player = (Player) commandSender;
          if (Strings.TwitterStatus.equalsIgnoreCase("true")){
-            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Twitchdescription) + " "+ LinkMe_Utils.replaceColors(Strings.Twitterurl));
+            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Twitchdescription) + ": " + LinkMe_Utils.replaceColors(Strings.Twitterurl));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }

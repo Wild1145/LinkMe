@@ -15,7 +15,7 @@ public class Command_vent extends BukkitCommand
     {
     Player player = (Player) commandSender;
          if (Strings.VentriloStatus.equalsIgnoreCase("true")){
-            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Ventdescription) + " "+ LinkMe_Utils.replaceColors(Strings.Ventip));
+            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Ventdescription) + ": " + LinkMe_Utils.replaceColors(Strings.Ventip));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }

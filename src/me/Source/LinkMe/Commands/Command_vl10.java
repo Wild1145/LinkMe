@@ -15,7 +15,7 @@ public class Command_vl10 extends BukkitCommand
     {
     Player player = (Player) commandSender;
          if (Strings.Vote10Status.equalsIgnoreCase("true")){
-            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Vote10description) + " "+ LinkMe_Utils.replaceColors(Strings.Vote10url));
+            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Vote10description) + ": " + LinkMe_Utils.replaceColors(Strings.Vote10url));
         } else {
             player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
             }
