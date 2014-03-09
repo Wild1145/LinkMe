@@ -7,7 +7,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.facebook")
+@CommandPermissions(source = SourceType.PLAYER, permission = "linkme.facebook")
 public class Command_facebook extends BukkitCommand
 {
     @Override

@@ -8,7 +8,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.btwitter")
+@CommandPermissions(source = SourceType.PLAYER, permission = "linkme.btwitter")
 public class Command_btwitter extends BukkitCommand
 {
     @Override

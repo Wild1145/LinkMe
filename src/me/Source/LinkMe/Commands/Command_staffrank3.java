@@ -7,7 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.staffrank3")
+@CommandPermissions(source = SourceType.PLAYER, permission = "linkme.staffrank3")
 public class Command_staffrank3 extends BukkitCommand
 {
     

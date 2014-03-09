@@ -7,7 +7,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.rankup")
+@CommandPermissions(source = SourceType.PLAYER, permission = "linkme.rankup")
 public class Command_rankup extends BukkitCommand
 {
     @Override

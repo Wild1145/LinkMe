@@ -8,7 +8,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.bforum")
+@CommandPermissions(source = SourceType.PLAYER, permission = "linkme.bforum")
 public class Command_bforum extends BukkitCommand
 {
     @Override

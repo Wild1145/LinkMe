@@ -7,7 +7,7 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "linkme.vl2")
+@CommandPermissions(source = SourceType.PLAYER, permission = "linkme.vl2")
 public class Command_vl2 extends BukkitCommand
 {
     @Override

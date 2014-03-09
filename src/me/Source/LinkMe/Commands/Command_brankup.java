@@ -8,7 +8,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-@CommandPermissions(source = SourceType.PLAYER, usage = "Usage: /<command>", permission = "blinkme.brankup")
+@CommandPermissions(source = SourceType.PLAYER, permission = "blinkme.brankup")
 public class Command_brankup extends BukkitCommand
 {
     @Override
