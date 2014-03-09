@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import me.Source.LinkMe.Commands.Command_site;
+import net.pravian.bukkitlib.BukkitLib;
 import net.pravian.bukkitlib.command.BukkitCommandHandler;
 import net.pravian.bukkitlib.config.YamlConfig;
 import org.bukkit.Bukkit;
@@ -37,6 +38,7 @@ public class Linkme extends JavaPlugin
   @Override
   public void onEnable()
   {
+    BukkitLib.init(this);
     plugin = this;
     handler = new BukkitCommandHandler(plugin);
     handler.setCommandLocation(Command_site.class.getPackage());
