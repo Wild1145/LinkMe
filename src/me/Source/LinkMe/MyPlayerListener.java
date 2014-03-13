@@ -121,7 +121,6 @@ String AWebsiteurl = LinkMe_Utils.replaceColors(Strings.Websiteurl);
                        }
               } else {
               }
-               player.sendMessage("You do not have permission to use this!");
                    }
                }
                }
