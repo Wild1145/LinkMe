@@ -28,6 +28,7 @@ public class Linkme extends JavaPlugin
     public static final Logger logger = Bukkit.getLogger();
     public static BukkitCommandHandler handler;
     public static YamlConfig config;
+    public static YamlConfig messages;
     public static Linkme plugin;
 
     @Override
@@ -47,6 +48,8 @@ public class Linkme extends JavaPlugin
         //handler.setPermissionMessage(MSG_NO_PERMS);
         config = new YamlConfig(plugin, "config.yml", true);
         config.load();
+        messages = new YamlConfig(plugin, "messages.yml", true);
+        messages.load();
         PluginDescriptionFile pdfFile = getDescription();
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new MyPlayerListener(this), this);

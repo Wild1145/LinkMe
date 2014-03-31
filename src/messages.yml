@@ -1,0 +1,161 @@
+###########################
+# COMMAND & SIGN SETTINGS #
+###########################
+
+## NOTES ##
+
+## enabled - This value can either be true or false to enable or disable a feature
+## description - this is the text that you can put in front of each command to inform players
+## url / ip - The actual URL / IP of the media source.
+
+
+#Donator settings go here
+Donator: 
+    info:
+        enabled: true
+        description: 'Go have a look and check out our donation page at and remember every donation keeps the server running.'
+        url: 'http://www.google.com'
+        
+# Facebook settings go here
+Facebook:
+    info:
+        enabled: true
+        description: 'Come visit our Facebook page at'
+        url: 'http://www.google.com'
+        
+# Forum settings go here
+Forums:
+    info:
+        enabled: true
+        description: 'Come visit the Forums at'
+        url: 'http://www.google.com'
+        
+# Mumble settings go here
+Mumble:
+    info:
+        enabled: true
+        description: 'Come visit our Mumble server at'
+        ip: '127.0.0.1:9999'
+
+# Ranking Up
+RankingUp:
+    info:
+        enabled: true
+        description: 'Rank up information here'
+        
+# Teamspeak 3 settings go here
+Teamspeak3:
+    info:
+        enabled: true
+        description: 'Come visit our Teamspeak 3 server at'
+        ip: '127.0.0.1:9987'
+        
+# Twitch settings go here
+Twitch:
+    info:
+        enabled: true
+        description: 'Come visit our Twitch page at'
+        url: 'http://www.google.com'
+
+# Twitter
+Twitter:
+    info:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        url: 'http://www.google.com'
+        
+# Ventrillo settings go here
+Ventrillo:
+    info:
+        enabled: true
+        description: 'Come visit our Ventrillo server at'
+        ip: '127.0.0.1:9999'
+        
+# VoiceList settings go here
+VoiceList:
+    info:
+        description: 'here is a list of our Voice Servers'   
+
+# Voting settings go here
+Vote:
+    VoteLink01:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+    VoteLink02:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+    VoteLink03:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+    VoteLink04:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+    VoteLink05:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+    VoteLink06:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+    VoteLink07:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+    VoteLink08:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+    VoteLink09:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+    VoteLink10:
+        enabled: true
+        description: 'Come vote for us at'
+        url: 'http://www.google.com'
+
+# Website settings go here
+Website:
+    info:
+        enabled: true
+        description: 'Come visit our Website at'
+        url: 'http://www.google.com'
+        
+# Youtube settings go here     
+Youtube:
+    info:
+        enabled: true
+        description: 'You can find out Youtube page at'
+        url: 'http://www.youtube.com'
+
+
+#####################
+# STAFF INFORMATION #
+#####################
+
+Staff-Ranks:
+    Info1:
+        enabled: true
+        title: 'Owner'
+        name: 'Usernamehere'
+        facebook: 'http://www.facebook.com/NameHere'
+        twitter: 'http://www.twitter.com'
+    Info2:
+        enabled: true
+        title: 'Owner'
+        name: 'Usernamehere'
+        facebook: 'http://www.facebook.com/NameHere'
+        twitter: 'http://www.twitter.com'
+    Info3:
+        enabled: true
+        title: 'Owner'
+        name: 'Usernamehere'
+        facebook: 'http://www.facebook.com/NameHere'
+        twitter: 'http://www.twitter.com'
+
+# END OF MESSAGES
