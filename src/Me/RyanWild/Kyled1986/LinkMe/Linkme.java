@@ -54,10 +54,7 @@ public class Linkme extends JavaPlugin
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new MyPlayerListener(this), this);
         pm.registerEvents(new SignListener(this), this);
-        logger.log(Level.INFO, "{0} Version{1} Has Been Enabled", new Object[]
-        {
-            pdfFile.getName(), pdfFile.getVersion()
-        });
+        logger.info("LinkMe Enabled!");
         config.options().copyDefaults(true);
         saveConfig();
         try
