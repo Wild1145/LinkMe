@@ -50,7 +50,6 @@ public class Linkme extends JavaPlugin
         config.load();
         messages = new YamlConfig(plugin, "messages.yml", true);
         messages.load();
-        PluginDescriptionFile pdfFile = getDescription();
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new MyPlayerListener(this), this);
         pm.registerEvents(new SignListener(this), this);
