@@ -41,84 +41,84 @@ String AWebsiteurl = LinkMe_Utils.replaceColors(Strings.Websiteurl);
 
     @EventHandler
     public void interact(PlayerInteractEvent event) {
-        if ((event.getPlayer() !=null) && (event.getAction() !=null) && (event.getClickedBlock() !=null)) {
-               Player player = event.getPlayer();
-               Action action = event.getAction();
-               Material block = event.getClickedBlock().getType();
-               if(action == Action.RIGHT_CLICK_BLOCK) {
-                   if (block == Material.SIGN_POST || block == Material.WALL_SIGN) {
-                       Sign sign = (Sign)event.getClickedBlock().getState();
-                       String line1 = sign.getLine(0);
-                       String line2 = sign.getLine(1);                      
-              if (player.hasPermission("linkme.sign.use")) {
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("donator")) {
-                         if (Strings.Donatorstatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  Adonatordesc + " " + adonatorurl);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                         }
-                       }
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("facebook")) {
-                         if (Strings.FacebookStatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  Afacebookdesc + " " + afacebookurl);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                         
-                       }
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("forum")) {
-                         if (Strings.ForumStatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  Aforumdesc + " " + aforumurl);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                         }
-                       }
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("mumble")) {
-                         if (Strings.MumbleStatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  AMumbledescription + "" + AMumbleip);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                         }
-                       }
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("rankup")) {
-                         if (Strings.RankupStatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  ARankdescription);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                         }
-                       }
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("site")) {
-                         if (Strings.WebsiteStatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  AWebsitedescription + " " + AWebsiteurl);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                         }  
-                       }
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("ts")) {
-                         if (Strings.TS3Status.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  ATS33description + " " + ATS3ip);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                         }
-                       }
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("twitch")) {
-                         if (Strings.Twitchdescription.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  ATwitchdescription + " " + ATwitchurl);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                         }
-                       }
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("twtter")) {
-                         if (Strings.TwitterStatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  ATwitterdescription + " " + ATwitterurl);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
-                         }
-                       }
-                       if(line1.contains("[LM]")&& line2.equalsIgnoreCase("vent")) {
-                         if (Strings.VentriloStatus.equalsIgnoreCase("true")) {
-                         player.sendMessage(Announcer + "|| " +  AVentdescription + " " + AVentip);
-                         } else {
-                         player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+        if ((event.getPlayer() != null) && (event.getAction() != null) && (event.getClickedBlock() != null)) {
+            Player player = event.getPlayer();
+            Action action = event.getAction();
+            Material block = event.getClickedBlock().getType();
+            if (action == Action.RIGHT_CLICK_BLOCK) {
+                if (block == Material.SIGN_POST || block == Material.WALL_SIGN) {
+                    Sign sign = (Sign) event.getClickedBlock().getState();
+                    String line1 = sign.getLine(0);
+                    String line2 = sign.getLine(1);
+                    if (player.hasPermission("linkme.sign.use")) {
+                        if (line1.contains("[LM]") && line2.equalsIgnoreCase("donator")) {
+                            if (Strings.Donatorstatus.equalsIgnoreCase("true")) {
+                                player.sendMessage(Announcer + "|| " + Adonatordesc + " " + adonatorurl);
+                            } else {
+                                player.sendMessage(Strings.MSG_NO_PERMS);
+                            }
+                        }
+                        if (line1.contains("[LM]") && line2.equalsIgnoreCase("facebook")) {
+                            if (Strings.FacebookStatus.equalsIgnoreCase("true")) {
+                                player.sendMessage(Announcer + "|| " + Afacebookdesc + " " + afacebookurl);
+                            } else {
+                                player.sendMessage(Strings.MSG_NO_PERMS);
+
+                            }
+                            if (line1.contains("[LM]") && line2.equalsIgnoreCase("forum")) {
+                                if (Strings.ForumStatus.equalsIgnoreCase("true")) {
+                                    player.sendMessage(Announcer + "|| " + Aforumdesc + " " + aforumurl);
+                                } else {
+                                    player.sendMessage(Strings.MSG_NO_PERMS);
+                                }
+                            }
+                            if (line1.contains("[LM]") && line2.equalsIgnoreCase("mumble")) {
+                                if (Strings.MumbleStatus.equalsIgnoreCase("true")) {
+                                    player.sendMessage(Announcer + "|| " + AMumbledescription + "" + AMumbleip);
+                                } else {
+                                    player.sendMessage(Strings.MSG_NO_PERMS);
+                                }
+                            }
+                            if (line1.contains("[LM]") && line2.equalsIgnoreCase("rankup")) {
+                                if (Strings.RankupStatus.equalsIgnoreCase("true")) {
+                                    player.sendMessage(Announcer + "|| " + ARankdescription);
+                                } else {
+                                    player.sendMessage(Strings.MSG_NO_PERMS);
+                                }
+                            }
+                            if (line1.contains("[LM]") && line2.equalsIgnoreCase("site")) {
+                                if (Strings.WebsiteStatus.equalsIgnoreCase("true")) {
+                                    player.sendMessage(Announcer + "|| " + AWebsitedescription + " " + AWebsiteurl);
+                                } else {
+                                    player.sendMessage(Strings.MSG_NO_PERMS);
+                                }
+                            }
+                            if (line1.contains("[LM]") && line2.equalsIgnoreCase("ts")) {
+                                if (Strings.TS3Status.equalsIgnoreCase("true")) {
+                                    player.sendMessage(Announcer + "|| " + ATS33description + " " + ATS3ip);
+                                } else {
+                                    player.sendMessage(Strings.MSG_NO_PERMS);
+                                }
+                            }
+                            if (line1.contains("[LM]") && line2.equalsIgnoreCase("twitch")) {
+                                if (Strings.Twitchdescription.equalsIgnoreCase("true")) {
+                                    player.sendMessage(Announcer + "|| " + ATwitchdescription + " " + ATwitchurl);
+                                } else {
+                                    player.sendMessage(Strings.MSG_NO_PERMS);
+                                }
+                            }
+                            if (line1.contains("[LM]") && line2.equalsIgnoreCase("twtter")) {
+                                if (Strings.TwitterStatus.equalsIgnoreCase("true")) {
+                                    player.sendMessage(Announcer + "|| " + ATwitterdescription + " " + ATwitterurl);
+                                } else {
+                                    player.sendMessage(Strings.MSG_NO_PERMS);
+                                }
+                            }
+                            if (line1.contains("[LM]") && line2.equalsIgnoreCase("vent")) {
+                                if (Strings.VentriloStatus.equalsIgnoreCase("true")) {
+                                    player.sendMessage(Announcer + "|| " + AVentdescription + " " + AVentip);
+                                } else {
+                                    player.sendMessage(Strings.MSG_NO_PERMS);
                          }
                        }
               } else {
