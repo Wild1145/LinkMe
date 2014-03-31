@@ -60,7 +60,7 @@ public class Linkme extends JavaPlugin
     }
     catch (IOException e)
     {
-      logger.severe("[" + getDescription().getName() + "] Error Submitting stats!");
+      logger.log(Level.SEVERE, "[{0}] Error Submitting stats!", getDescription().getName());
     }
 
     Bukkit.broadcastMessage(config.getString("announcer") + ": LinkMe Plugin by Wild1145 & Kyle1986 has been Enabled! ");
