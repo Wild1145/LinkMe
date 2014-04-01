@@ -3,9 +3,6 @@
 #########################
 
 
-# If you would like a list of the comptabile colour codes please visit 
-# http://minecraft.gamepedia.com/Formatting_codes#Color_codes
-
 
 ###################
 # GLOBAL SETTINGS #
@@ -13,5 +10,25 @@
 
 ## Change the name of the announcer here this is global and will show in every command
 announcer: '[LinkMe]'
+
+###################
+# MySQL SETTINGS  #
+###################
+
+Hostname: ''
+Port: '3306'  
+# Dont change the port unless you know the shit your messing with
+Database: ''
+Username: ''
+Password: ''
+
+##################
+# PANEL SETTINGS #
+##################
+
+# API Access
+panel_api_key: ''
+panel_url: 'http://www.yoursite.com/panel/api/api.php'
+#Include everything up to where the API Is actually needed to add.
 
 # END OF CONFIG
