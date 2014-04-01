@@ -21,17 +21,17 @@ public class Command_bvoice extends BukkitCommand
          if (Strings.MumbleStatus.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbledescription) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbleip));
         } else {
-            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            player.sendMessage(Strings.MSG_NO_PERMS);
             }
          if (Strings.VentriloStatus.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Ventdescription) + ": " + LinkMe_Utils.replaceColors(Strings.Ventip));
         } else {
-            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            player.sendMessage(Strings.MSG_NO_PERMS);
             }
          if (Strings.TS3Status.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.TS33description) + ": " + LinkMe_Utils.replaceColors(Strings.TS3ip));
         } else {
-            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
     }

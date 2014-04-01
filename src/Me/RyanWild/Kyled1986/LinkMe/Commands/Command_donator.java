@@ -17,7 +17,7 @@ public class Command_donator extends BukkitCommand
          if (Strings.Donatorstatus.equalsIgnoreCase("true")){
             player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Donatordescription) + ": " + LinkMe_Utils.replaceColors(Strings.Donatorurl));
         } else {
-            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
     }

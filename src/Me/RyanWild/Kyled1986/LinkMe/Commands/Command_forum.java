@@ -17,7 +17,7 @@ public class Command_forum extends BukkitCommand
          if (Strings.ForumStatus.equalsIgnoreCase("true")){
             player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Forumdescription) + ": " + LinkMe_Utils.replaceColors(Strings.Forumurl));
         } else {
-            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
     }

@@ -10,7 +10,7 @@
 
 ## Change the name of the announcer here this is global and will show in every command
 announcer: '[LinkMe]'
-
+nopermission: 'Sorry you do not have permission to do this, please contact your system adminstrator'
 ###################
 # MySQL SETTINGS  #
 ###################

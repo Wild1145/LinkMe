@@ -18,7 +18,7 @@ public class Command_bsite extends BukkitCommand
          if (Strings.WebsiteStatus.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Websitedescription) + ": " + LinkMe_Utils.replaceColors(Strings.Websiteurl));
         } else {
-            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
     }

@@ -17,7 +17,7 @@ public class Command_vl1 extends BukkitCommand
          if (Strings.Vote01Status.equalsIgnoreCase("true")){
             player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Vote01description) + ": " + LinkMe_Utils.replaceColors(Strings.Vote01url));
         } else {
-            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
     }

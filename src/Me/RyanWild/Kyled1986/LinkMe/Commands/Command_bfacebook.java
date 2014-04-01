@@ -18,8 +18,7 @@ public class Command_bfacebook extends BukkitCommand
          if (Strings.FacebookStatus.equalsIgnoreCase("true")){
             Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.FacebookStatus)+ ": " + LinkMe_Utils.replaceColors(Strings.Facebookurl)); 
         } else {
-
-            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
     }

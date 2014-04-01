@@ -20,7 +20,7 @@ public class Command_staffrank3 extends BukkitCommand
             player.sendMessage(Strings.StaffInfo3Facebook);
             player.sendMessage(Strings.StaffInfo3Twitter);
         } else {
-            player.sendMessage("Sorry this feature is not enabled please contact a member of staff.");
+            player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
     }  

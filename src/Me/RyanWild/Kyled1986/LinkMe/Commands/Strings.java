@@ -2,10 +2,9 @@
 package Me.RyanWild.Kyled1986.LinkMe.Commands;
 
 import Me.RyanWild.Kyled1986.LinkMe.Linkme;
-import org.bukkit.ChatColor;
 
 public class Strings {
-public static final String MSG_NO_PERMS = ChatColor.RED + "You do not have permission to use this command.";
+public static String MSG_NO_PERMS = Linkme.config.getString("nopermission");
 public static String Announcer = Linkme.config.getString("announcer");
 public static String Donatordescription = Linkme.config.getString("Donator.info.description");
 public static String Donatorurl = Linkme.config.getString("Donator.info.url");

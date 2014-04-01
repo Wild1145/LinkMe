@@ -6,6 +6,7 @@ package Me.RyanWild.Kyled1986.LinkMe;
  * java lessons and learn how to do it, instead of trying to rip of other
  * peoples hard work, oh and don't try to submit it to Bukkit.
  */
+import Me.RyanWild.Kyled1986.LinkMe.Listeners.SignListener;
 import Me.RyanWild.Kyled1986.LinkMe.Listeners.MyPlayerListener;
 import java.io.IOException;
 import java.util.logging.Level;
