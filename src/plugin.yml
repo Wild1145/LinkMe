@@ -1,6 +1,6 @@
 name: Link-Me
 main: Me.RyanWild.Kyled1986.LinkMe.Linkme
-version: 2.7.1
+version: 2.7.2
 description: Link Me
 
 commands:
@@ -42,25 +42,7 @@ commands:
     description: Broadcasts all voice servers
   lmreload:
     description: Reloads LinkMe
-  vl1:
-    description: Displays Voting information and URL
-  vl2:
-    description: Displays Voting information and URL
-  vl3:
-    description: Displays Voting information and URL
-  vl4:
-    description: Displays Voting information and URL
-  vl5:
-    description: Displays Voting information and URL
-  vl6:
-    description: Displays Voting information and URL
-  vl7:
-    description: Displays Voting information and URL
-  vl8:
-    description: Displays Voting information and URL
-  vl9:
-    description: Displays Voting information and URL
-  vl10:
+  vote:
     description: Displays Voting information and URL
   rankup:
     description: Displays all the information about how to rank up and includes a link

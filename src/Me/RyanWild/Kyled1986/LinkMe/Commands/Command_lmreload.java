@@ -30,7 +30,6 @@ public class Command_lmreload extends BukkitCommand
                 try {
                     PluginManager pluginManager = plugin.getServer().getPluginManager();
                     plugin.getConfig().load(filepath + "\\" + filename);
-                    player.sendMessage("Commander config has been reloaded!");
                     pluginManager.disablePlugin(plugin);
                     pluginManager.enablePlugin(plugin);
                     plugin.getConfig().load(filepath + "\\" + filename);
