@@ -2,7 +2,7 @@ package Me.RyanWild.Kyled1986.LinkMe;
 
 public class LinkMe_Utils {
     public static final char ESCAPE = '\u00A7';
-    public static String replaceColors(String text) {
+     public static String replaceColors(String text) {
         char[] chrarray = text.toCharArray();
         for (int index = 0; index < chrarray.length; index ++) {
             char chr = chrarray[index];
@@ -18,5 +18,5 @@ public class LinkMe_Utils {
             }
         }
         return new String(chrarray);
-    }
+    } 
 }
