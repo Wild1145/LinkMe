@@ -137,29 +137,4 @@ Youtube:
         description: 'You can find out Youtube page at'
         url: 'http://www.youtube.com'
 
-
-#####################
-# STAFF INFORMATION #
-#####################
-
-Staff-Ranks:
-    Info1:
-        enabled: true
-        title: 'Owner'
-        name: 'Usernamehere'
-        facebook: 'http://www.facebook.com/NameHere'
-        twitter: 'http://www.twitter.com'
-    Info2:
-        enabled: true
-        title: 'Owner'
-        name: 'Usernamehere'
-        facebook: 'http://www.facebook.com/NameHere'
-        twitter: 'http://www.twitter.com'
-    Info3:
-        enabled: true
-        title: 'Owner'
-        name: 'Usernamehere'
-        facebook: 'http://www.facebook.com/NameHere'
-        twitter: 'http://www.twitter.com'
-
 # END OF MESSAGES
