@@ -1,6 +1,6 @@
 name: Link-Me
-main: me.Source.LinkMe.Linkme
-version: 2.7
+main: Me.RyanWild.Kyled1986.LinkMe.LinkMe
+version: 2.7.1
 description: Link Me
 
 commands:
