@@ -72,7 +72,7 @@
 
     -->
 	
-	<target name="-post-jar">
+    <target name="-post-jar">
         <echo level="info" message="---- Bukkit Build Generator, by Jerom van der Sar" />
         <echo level="info" message="---- Finalizing Build" />
         

@@ -8,18 +8,23 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
 @CommandPermissions(source = SourceType.PLAYER, permission = "linkme.bfacebook")
 public class Command_bfacebook extends BukkitCommand
-{
+    {
+
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
-    {
-    Player player = (Player) commandSender;
-         if (Strings.FacebookStatus.equalsIgnoreCase("true")){
-            Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.FacebookStatus)+ ": " + LinkMe_Utils.replaceColors(Strings.Facebookurl)); 
-        } else {
+        {
+        Player player = (Player) commandSender;
+        if (Strings.FacebookStatus.equalsIgnoreCase("true"))
+            {
+            Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.FacebookStatus) + ": " + LinkMe_Utils.replaceColors(Strings.Facebookurl));
+            }
+        else
+            {
             player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
+        }
     }
-}

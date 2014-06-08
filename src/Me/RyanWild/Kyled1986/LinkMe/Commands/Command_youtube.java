@@ -7,18 +7,23 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
 @CommandPermissions(source = SourceType.PLAYER, permission = "linkme.youtube")
 public class Command_youtube extends BukkitCommand
-{
+    {
+
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
-    {
-    Player player = (Player) commandSender;
-         if (Strings.YoutubeStatus.equalsIgnoreCase("true")){
+        {
+        Player player = (Player) commandSender;
+        if (Strings.YoutubeStatus.equalsIgnoreCase("true"))
+            {
             player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Youtubedescription) + ": " + LinkMe_Utils.replaceColors(Strings.Youtubeurl));
-        } else {
+            }
+        else
+            {
             player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
+        }
     }
-}

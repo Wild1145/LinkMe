@@ -24,7 +24,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.mcstats.Metrics;
 
-public class Linkme extends BukkitPlugin {
+public class Linkme extends BukkitPlugin
+    {
 
     public static final Logger logger = Bukkit.getLogger();
     public static BukkitCommandHandler handler;
@@ -33,20 +34,23 @@ public class Linkme extends BukkitPlugin {
     public static Linkme plugin;
 
     @Override
-    public void onDisable() {
+    public void onDisable()
+        {
         Bukkit.broadcastMessage(config.getString("announcer") + ": LinkMe by Kyled1986 & Wild1145 has been Disabled! ");
         logger.info("LinkMe Disabled");
-    }
+        }
 
     @Override
-    public void onLoad() {
+    public void onLoad()
+        {
         this.plugin = this;
 
         this.handler = new BukkitCommandHandler(plugin); // Initialize the command handler
-    }
+        }
 
     @Override
-    public void onEnable() {
+    public void onEnable()
+        {
         BukkitLib.init(plugin);
         plugin = this;
         handler.setCommandLocation(Command_bdonator.class.getPackage()); // Set the location of the commands.
@@ -61,18 +65,22 @@ public class Linkme extends BukkitPlugin {
         logger.info("LinkMe Enabled!");
         config.options().copyDefaults(true);
         saveConfig();
-        try {
+        try
+            {
             Metrics metrics = new Metrics(this);
             metrics.start();
-        } catch (IOException e) {
+            }
+        catch (IOException e)
+            {
             logger.log(Level.SEVERE, "[{0}] Error Submitting stats!", getDescription().getName());
-        }
+            }
 
         Bukkit.broadcastMessage(config.getString("announcer") + ": LinkMe Plugin by Wild1145 & Kyle1986 has been Enabled! ");
-    }
+        }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
+        {
         return handler.handleCommand(sender, cmd, commandLabel, args);
+        }
     }
-}

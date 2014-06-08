@@ -8,18 +8,23 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import Me.RyanWild.Kyled1986.LinkMe.Commands.Strings;
+
 @CommandPermissions(source = SourceType.PLAYER, permission = "linkme.site")
 public class Command_site extends BukkitCommand
-{
+    {
+
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
-    {
-    Player player = (Player) commandSender;
-         if (Strings.WebsiteStatus.equalsIgnoreCase("true")){
+        {
+        Player player = (Player) commandSender;
+        if (Strings.WebsiteStatus.equalsIgnoreCase("true"))
+            {
             player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Websitedescription) + ": " + LinkMe_Utils.replaceColors(Strings.Websiteurl));
-        } else {
+            }
+        else
+            {
             player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
+        }
     }
-}

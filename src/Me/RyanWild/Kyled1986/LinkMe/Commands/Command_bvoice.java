@@ -8,31 +8,42 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
 @CommandPermissions(source = SourceType.PLAYER, permission = "linkme.bvoice")
 public class Command_bvoice extends BukkitCommand
-{
+    {
+
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
-    {
+        {
 
         Player player = (Player) commandSender;
 
         Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + (LinkMe_Utils.replaceColors(Strings.Voicelist)));
-         if (Strings.MumbleStatus.equalsIgnoreCase("true")){
+        if (Strings.MumbleStatus.equalsIgnoreCase("true"))
+            {
             Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbledescription) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbleip));
-        } else {
+            }
+        else
+            {
             player.sendMessage(Strings.MSG_NO_PERMS);
             }
-         if (Strings.VentriloStatus.equalsIgnoreCase("true")){
+        if (Strings.VentriloStatus.equalsIgnoreCase("true"))
+            {
             Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Ventdescription) + ": " + LinkMe_Utils.replaceColors(Strings.Ventip));
-        } else {
+            }
+        else
+            {
             player.sendMessage(Strings.MSG_NO_PERMS);
             }
-         if (Strings.TS3Status.equalsIgnoreCase("true")){
+        if (Strings.TS3Status.equalsIgnoreCase("true"))
+            {
             Bukkit.broadcastMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.TS33description) + ": " + LinkMe_Utils.replaceColors(Strings.TS3ip));
-        } else {
+            }
+        else
+            {
             player.sendMessage(Strings.MSG_NO_PERMS);
             }
         return false;
+        }
     }
-}
