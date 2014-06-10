@@ -7,7 +7,6 @@ import net.pravian.bukkitlib.command.SourceType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import Me.RyanWild.Kyled1986.LinkMe.Commands.Strings;
 
 @CommandPermissions(source = SourceType.PLAYER, permission = "linkme.site")
 public class Command_site extends BukkitCommand

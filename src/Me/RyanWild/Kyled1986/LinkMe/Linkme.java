@@ -19,9 +19,7 @@ import net.pravian.bukkitlib.implementation.BukkitPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
-import org.bukkit.plugin.java.JavaPlugin;
 import org.mcstats.Metrics;
 
 public class Linkme extends BukkitPlugin
