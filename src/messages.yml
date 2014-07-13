@@ -47,6 +47,11 @@ RankingUp:
         enabled: true
         description: 'Rank up information here'
         
+# Set
+Set:
+    info:
+        enabled: true
+        
 # Teamspeak 3 settings go here
 Teamspeak3:
     info:

@@ -20,6 +20,7 @@ public class Strings
     public static String MumbleStatus = Linkme.messages.getString("Mumble.info.enabled");
     public static String Rankdescription = Linkme.messages.getString("RankingUp.info.description");
     public static String RankupStatus = Linkme.messages.getString("RankingUp.info.enabled");
+    public static String SetStatus = Linkme.messages.getString("Set.info.enabled");
     public static String TS33description = Linkme.messages.getString("Teamspeak3.info.description");
     public static String TS3ip = Linkme.messages.getString("Teamspeak3.info.ip");
     public static String TS3Status = Linkme.messages.getString("Teamspeak3.info.enabled");

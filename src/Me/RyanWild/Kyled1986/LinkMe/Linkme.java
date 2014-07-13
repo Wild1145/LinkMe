@@ -77,8 +77,7 @@ public class Linkme extends BukkitPlugin
         }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
-        {
+    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         return handler.handleCommand(sender, cmd, commandLabel, args);
-        } 
-}
+        }
+    }
