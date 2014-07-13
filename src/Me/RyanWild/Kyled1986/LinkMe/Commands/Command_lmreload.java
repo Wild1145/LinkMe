@@ -1,6 +1,6 @@
 package Me.RyanWild.Kyled1986.LinkMe.Commands;
 
-import static Me.RyanWild.Kyled1986.LinkMe.Linkme.config;
+import Me.RyanWild.Kyled1986.LinkMe.Linkme;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -38,7 +38,7 @@ public class Command_lmreload extends BukkitCommand
                 pluginManager.disablePlugin(plugin);
                 pluginManager.enablePlugin(plugin);
                 plugin.getConfig().load(filepath + "\\" + configfilename);
-                player.sendMessage("~Config has been reloaded");
+                player.sendMessage("Config has been reloaded");
                 }
             catch (IOException ex)
                 {
@@ -52,11 +52,11 @@ public class Command_lmreload extends BukkitCommand
         else
             {
             player.sendMessage("Config.yml was unable to be reloaded - generating a new configuration file!");
-            config.options().copyDefaults();
+            Linkme.config.options().copyDefaults();
             player.sendMessage("A new configuration file has been generated");
             }
 
-        if (f2.exists() && !f.isDirectory())
+        if (f2.exists() && !f2.isDirectory())
             {
             try
                 {
@@ -79,7 +79,7 @@ public class Command_lmreload extends BukkitCommand
         else
             {
             player.sendMessage("Messages.yml was unable to be reloaded - generating a new configuration file!");
-            config.options().copyDefaults();
+            Linkme.messages.options().copyDefaults();
             player.sendMessage("A new configuration file has been generated");
             }
         return false;
