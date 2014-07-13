@@ -4,49 +4,49 @@ version: 2.7.3
 description: Link Me
 
 commands:
-  site:
-    description: Site website
-  forum:
-    description: Forums
+  bdonator:
+    description: Broadcast Donation Page
+  bfacebook:
+    description: Broadcast Facebook Page
   bforum:
     description: Broadcast forums
+  brankup:
+    description: Broadcasts all the information about how to rank up and includes a link
   bsite:
     description: Broadcast site website
+  btwitch:
+    description: Broadcast Twitch Steam
+  btwitter:
+    description: Broadcast Twitter Url
+  bvoice:
+    description: Broadcasts all voice servers
+  byoutube:
+    description: Broadcast Youtube Page
+  donator:
+    description: Donation Page
+  facebook:
+    description: Facebook Page
+  forum:
+    description: Forums
+  lmreload:
+    description: Reloads LinkMe
+  rankup:
+    description: Displays all the information about how to rank up and includes a link
   mum:
     description: Mumble Server address
+  set:
+    description: sets text in game DEVELOPMENT!
+  site:
+    description: Site website
   ts:
     description: TS3 IP
   twitch:
     description: Twitch Steam
-  btwitch:
-    description: Broadcast Twitch Steam
-  vent:
-    description: vent IP
-  facebook:
-    description: Facebook Page
-  bfacebook:
-    description: Broadcast Facebook Page
-  youtube:
-    description: Youtube Page
-  byoutube:
-    description: Broadcast Youtube Page
   twitter:
     description: Twitter Url 
-  btwitter:
-    description: Broadcast Twitter Url
-  donator:
-    description: Donation Page
-  bdonator:
-    description: Broadcast Donation Page
-  bvoice:
-    description: Broadcasts all voice servers
-  lmreload:
-    description: Reloads LinkMe
+  vent:
+    description: vent IP
+  youtube:
+    description: Youtube Page
   vote:
     description: Displays Voting information and URL
-  rankup:
-    description: Displays all the information about how to rank up and includes a link
-  brankup:
-    description: Broadcasts all the information about how to rank up and includes a link
-  set:
-    description: sets text in game DEVELOPMENT!
