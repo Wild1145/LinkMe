@@ -80,5 +80,5 @@ public class Linkme extends BukkitPlugin
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
         {
         return handler.handleCommand(sender, cmd, commandLabel, args);
-        }
-    }
+        } 
+}

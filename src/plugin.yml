@@ -48,3 +48,5 @@ commands:
     description: Displays all the information about how to rank up and includes a link
   brankup:
     description: Broadcasts all the information about how to rank up and includes a link
+  set:
+    description: sets text in game DEVELOPMENT!
