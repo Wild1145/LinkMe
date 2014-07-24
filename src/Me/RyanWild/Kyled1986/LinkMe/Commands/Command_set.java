@@ -301,6 +301,6 @@ public class Command_set extends BukkitCommand
             player.sendMessage("Youtube Description set to" + " " +newthing);
             }
 
-        return false;
+        return true;
         }
     }
