@@ -30,21 +30,21 @@ public class Command_set extends BukkitCommand
         }
         
         Player player = (Player) commandSender;
-        
-        
-            switch (args[1]) {
-                case "donatordesc": //KYLE
+
+            
+        if (args[1].equalsIgnoreCase("donatordescription"))
+            {
                     Linkme.messages.set("Donator.info.description", newthing);
                     Linkme.messages.save();
                     player.sendMessage("Donator Description set to" + " " + newthing);
-                    break;
-
-                case "donatorurl": //KYLE
+            }
+            
+            
+        if (args[1].equalsIgnoreCase("donatorurl"))
+            {
                     Linkme.messages.set("Donator.info.url", newthing);
                     Linkme.messages.save();
                     player.sendMessage("Donator Url set to" + " " + newthing);
-                    break;
-
             }
 
         if (args[1].equalsIgnoreCase("facebookurl"))
