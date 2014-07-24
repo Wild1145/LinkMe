@@ -32,20 +32,18 @@ public class Command_set extends BukkitCommand
         Player player = (Player) commandSender;
         
         
+            switch (args[1]) {
+                case "donatordesc": //KYLE
+                    Linkme.messages.set("Donator.info.description", newthing);
+                    Linkme.messages.save();
+                    player.sendMessage("Donator Description set to" + " " + newthing);
+                    break;
 
-        if (args[1].equalsIgnoreCase("donatordesc"))
-            {
-        
-            Linkme.messages.set("Donator.info.description", newthing);
-            Linkme.messages.save();
-            player.sendMessage("Donator Description set to" + " " + newthing);
-            }
-
-        if (!args[1].equalsIgnoreCase("donatorurl"))
-            {
-            Linkme.messages.set("Donator.info.url", newthing);
-            Linkme.messages.save();
-            player.sendMessage("Donator Url set to" + " " + newthing);
+                case "donatorurl": //KYLE
+                    Linkme.messages.set("Donator.info.url", newthing);
+                    Linkme.messages.save();
+                    player.sendMessage("Donator Url set to" + " " + newthing);
+                    break;
 
             }
 
