@@ -1,8 +1,8 @@
-package Me.RyanWild.Kyled1986.LinkMe.Commands;
+package Me.RyanWild.Kyled1986.LinkMe;
 
 import Me.RyanWild.Kyled1986.LinkMe.Linkme;
 
-public class Strings
+public class LinkMe_Strings
     {
 
     public static String MSG_NO_PERMS = Linkme.config.getString("nopermission");

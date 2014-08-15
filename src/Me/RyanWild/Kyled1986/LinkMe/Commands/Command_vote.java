@@ -5,6 +5,7 @@
  */
 package Me.RyanWild.Kyled1986.LinkMe.Commands;
 
+import Me.RyanWild.Kyled1986.LinkMe.LinkMe_Strings;
 import Me.RyanWild.Kyled1986.LinkMe.LinkMe_Utils;
 import Me.RyanWild.Kyled1986.LinkMe.Linkme;
 import net.pravian.bukkitlib.command.BukkitCommand;
@@ -71,7 +72,7 @@ public class Command_vote extends BukkitCommand
                 }
             else
                 {
-                player.sendMessage(Strings.MSG_NO_PERMS);
+                player.sendMessage(LinkMe_Strings.MSG_NO_PERMS);
                 }
             }
         return false;

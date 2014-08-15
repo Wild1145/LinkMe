@@ -1,5 +1,6 @@
 package Me.RyanWild.Kyled1986.LinkMe.Commands;
 
+import Me.RyanWild.Kyled1986.LinkMe.LinkMe_Strings;
 import Me.RyanWild.Kyled1986.LinkMe.LinkMe_Utils;
 import net.pravian.bukkitlib.command.BukkitCommand;
 import net.pravian.bukkitlib.command.CommandPermissions;
@@ -17,30 +18,30 @@ public class Command_voice extends BukkitCommand
         {
         Player player = (Player) commandSender;
 
-        player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + (LinkMe_Utils.replaceColors(Strings.Voicelist)));
-        if (Strings.MumbleStatus.equalsIgnoreCase("true"))
+        player.sendMessage(LinkMe_Utils.replaceColors(LinkMe_Strings.Announcer) + ": " + (LinkMe_Utils.replaceColors(LinkMe_Strings.Voicelist)));
+        if (LinkMe_Strings.MumbleStatus.equalsIgnoreCase("true"))
             {
-            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbledescription) + ": " + LinkMe_Utils.replaceColors(Strings.Mumbleip));
+            player.sendMessage(LinkMe_Utils.replaceColors(LinkMe_Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(LinkMe_Strings.Mumbledescription) + ": " + LinkMe_Utils.replaceColors(LinkMe_Strings.Mumbleip));
             }
         else
             {
-            player.sendMessage(Strings.MSG_NO_PERMS);
+            player.sendMessage(LinkMe_Strings.MSG_NO_PERMS);
             }
-        if (Strings.VentriloStatus.equalsIgnoreCase("true"))
+        if (LinkMe_Strings.VentriloStatus.equalsIgnoreCase("true"))
             {
-            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.Ventdescription) + ": " + LinkMe_Utils.replaceColors(Strings.Ventip));
-            }
-        else
-            {
-            player.sendMessage(Strings.MSG_NO_PERMS);
-            }
-        if (Strings.TS3Status.equalsIgnoreCase("true"))
-            {
-            player.sendMessage(LinkMe_Utils.replaceColors(Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(Strings.TS33description) + ": " + LinkMe_Utils.replaceColors(Strings.TS3ip));
+            player.sendMessage(LinkMe_Utils.replaceColors(LinkMe_Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(LinkMe_Strings.Ventdescription) + ": " + LinkMe_Utils.replaceColors(LinkMe_Strings.Ventip));
             }
         else
             {
-            player.sendMessage(Strings.MSG_NO_PERMS);
+            player.sendMessage(LinkMe_Strings.MSG_NO_PERMS);
+            }
+        if (LinkMe_Strings.TS3Status.equalsIgnoreCase("true"))
+            {
+            player.sendMessage(LinkMe_Utils.replaceColors(LinkMe_Strings.Announcer) + ": " + LinkMe_Utils.replaceColors(LinkMe_Strings.TS33description) + ": " + LinkMe_Utils.replaceColors(LinkMe_Strings.TS3ip));
+            }
+        else
+            {
+            player.sendMessage(LinkMe_Strings.MSG_NO_PERMS);
             }
         return false;
         }
