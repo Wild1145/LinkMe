@@ -1,7 +1,10 @@
 package Me.RyanWild.Kyled1986.LinkMe.Commands;
+
 import Me.RyanWild.Kyled1986.LinkMe.Linkme;
+
 public class Strings
     {
+
     public static String MSG_NO_PERMS = Linkme.config.getString("nopermission");
     public static String Announcer = Linkme.config.getString("announcer");
     public static String Donatordescription = Linkme.messages.getString("Donator.info.description");

@@ -17,34 +17,32 @@ public class Command_set extends BukkitCommand
     @Override
     public boolean run(CommandSender commandSender, Command command, String commandLabel, String[] args)
         {
-        
-         if (args.length == 0)
-        {
+
+        if (args.length == 0)
+            {
             return false;
-        }
-         
-         String newthing = null;
+            }
+
+        String newthing = null;
         if (args.length >= 2)
-        {
+            {
             newthing = StringUtils.join(ArrayUtils.subarray(args, 1, args.length), " ");
-        }
-        
+            }
+
         Player player = (Player) commandSender;
 
-            
         if (args[1].equalsIgnoreCase("donatordescription"))
             {
-                    Linkme.messages.set("Donator.info.description", newthing);
-                    Linkme.messages.save();
-                    player.sendMessage("Donator Description set to" + " " + newthing);
+            Linkme.messages.set("Donator.info.description", newthing);
+            Linkme.messages.save();
+            player.sendMessage("Donator Description set to" + " " + newthing);
             }
-            
-            
+
         if (args[1].equalsIgnoreCase("donatorurl"))
             {
-                    Linkme.messages.set("Donator.info.url", newthing);
-                    Linkme.messages.save();
-                    player.sendMessage("Donator Url set to" + " " + newthing);
+            Linkme.messages.set("Donator.info.url", newthing);
+            Linkme.messages.save();
+            player.sendMessage("Donator Url set to" + " " + newthing);
             }
 
         if (args[1].equalsIgnoreCase("facebookurl"))
@@ -272,7 +270,7 @@ public class Command_set extends BukkitCommand
             {
             Linkme.messages.set("VoteLink10.info.url", newthing);
             Linkme.messages.save();
-            player.sendMessage("VoteLink10 Description set to" + " " +newthing);
+            player.sendMessage("VoteLink10 Description set to" + " " + newthing);
             }
 
         if (args[1].equalsIgnoreCase("Websiteurl"))
@@ -298,7 +296,7 @@ public class Command_set extends BukkitCommand
             {
             Linkme.messages.set("Youtube.info.url", newthing);
             Linkme.messages.save();
-            player.sendMessage("Youtube Description set to" + " " +newthing);
+            player.sendMessage("Youtube Description set to" + " " + newthing);
             }
 
         return true;
