@@ -1,7 +1,7 @@
 LinkMe
 ======
 
-*ATTENTION: This project has since been DISCONTINUED by Wild1145 and as such will recieve no further updated. Please follow: https://github.com/Superior-Development/Link-It-Up where Wild1145 is working on a far more advanced version of this project with the Superior Development Tema*
+*ATTENTION: This project has since been DISCONTINUED by Wild1145 and as such will recieve no further updated. Please follow: https://github.com/Superior-Development/Link-It-Up where Wild1145 is working on a far more advanced version of this project with the Superior Development Team*
 
 This is the LinkMe Plugin for a CraftBukkit Server.
 
